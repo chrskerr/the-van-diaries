@@ -1,7 +1,8 @@
 
 <script>
-	import _ from "lodash";
-	const pathname = _.get( window, 'location.pathname' );
+	// import _ from "lodash";
+	const pathname = "/";
+	// if ( window && "location" in window && window.location && "pathname" in window.location ) pathname = window.location.pathname;
 </script>
 
 <header id="header" class="alt">
