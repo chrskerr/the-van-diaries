@@ -12,4 +12,7 @@ export default {
 			$components: resolve('src/components')
 		}
 	},
+	ssr: {
+		noExternal: Object.keys(pkg.dependencies || {})
+	}
 };

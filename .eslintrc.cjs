@@ -1,12 +1,12 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "parserOptions": {
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
+	"env": {
+		"browser": true,
+		"es2021": true,
+	},
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module",
+	},
 	"rules": {
 		"indent": [ "error", "tab" ],
 		"linebreak-style": [ "error", "unix" ],
@@ -22,5 +22,5 @@ module.exports = {
 		"func-call-spacing": [ "error", "never" ],
 		"no-loop-func": "error",
 		"no-undef": "error",
-	}
+	},
 };

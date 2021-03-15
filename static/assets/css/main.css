@@ -3503,6 +3503,10 @@ input, select, textarea {
 						text-decoration: none;
 					}
 
+						#header > nav > ul > li.current > a {
+							box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+						}
+
 						#header > nav > ul > li > a:hover {
 							box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 						}

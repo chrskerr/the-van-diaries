@@ -1,7 +1,6 @@
-
 <script>
-	import Header from '$components/Header.svelte';
-	import Footer from '$components/Footer.svelte';
+	import Header from "$components/Header.svelte";
+	import Footer from "$components/Footer.svelte";
 </script>
 
 <Header />
@@ -11,15 +10,13 @@
 	<div class="wrapper style1 special">
 		<div class="inner">
 			<h1 class="heading alt">Sed elementum</h1>
-			<p>Lorem feugiat consequat phasellus ultrices nulla quis nibh lorem ligula</p>
+			<p>
+				Lorem feugiat consequat phasellus ultrices nulla quis nibh lorem
+				ligula
+			</p>
 			<div class="image fit special">
 				<img src="images/pic01.jpg" alt="" />
 			</div>
-			<ul class="feature-icons">
-				<li><span class="icon solid fa-laptop"></span><span class="label">Magna aliquam</span></li>
-				<li><span class="icon solid fa-wifi"></span><span class="label">Etiam feugiat</span></li>
-				<li><span class="icon solid fa-cloud"></span><span class="label">Nisl adipiscing</span></li>
-			</ul>
 		</div>
 	</div>
 </div>
@@ -34,7 +31,13 @@
 			<div class="image fit special">
 				<img src="images/pic02.jpg" alt="" />
 			</div>
-			<p class="special">Sed egestas, ante et vulputate volutpat pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum lorem ipsum dolor sit amet consequat hendrerit tortor semper lorem at felis.</p>
+			<p class="special">
+				Sed egestas, ante et vulputate volutpat pede semper est, vitae
+				luctus metus libero eu augue. Morbi purus libero, faucibus
+				adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent
+				elementum lorem ipsum dolor sit amet consequat hendrerit tortor
+				semper lorem at felis.
+			</p>
 			<ul class="actions">
 				<li><a href="#" class="button">Details</a></li>
 			</ul>
@@ -50,7 +53,11 @@
 				<div class="intro">
 					<header>
 						<h2 class="left">Eu ligula<br /> consequat</h2>
-						<p>Sed egestas, ante et vulputate volutpat pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.</p>
+						<p>
+							Sed egestas, ante et vulputate volutpat pede semper
+							est, vitae luctus metus libero eu augue. Morbi purus
+							libero, faucibus adipiscing.
+						</p>
 					</header>
 					<ul class="actions">
 						<li><a href="#" class="button">Details</a></li>
@@ -78,7 +85,13 @@
 	<div class="wrapper alt special">
 		<header class="major">
 			<h2>Ante gravida elementum</h2>
-			<p>Sed egestas, ante et vulputate volutpat pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum lorem ipsum dolor sit amet consequat hendrerit tortor semper lorem at felis.</p>
+			<p>
+				Sed egestas, ante et vulputate volutpat pede semper est, vitae
+				luctus metus libero eu augue. Morbi purus libero, faucibus
+				adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent
+				elementum lorem ipsum dolor sit amet consequat hendrerit tortor
+				semper lorem at felis.
+			</p>
 		</header>
 		<div class="wrapper style3">
 			<div class="inner">
@@ -89,9 +102,15 @@
 						</div>
 						<div class="content">
 							<h3>Ipsum nullam</h3>
-							<p>Sed egestas, ante et vulputate volutpat pede semper est luctus metus eu augue. Morbi purus amet libero.</p>
+							<p>
+								Sed egestas, ante et vulputate volutpat pede
+								semper est luctus metus eu augue. Morbi purus
+								amet libero.
+							</p>
 							<ul class="actions">
-								<li><a href="#" class="button small">More</a></li>
+								<li>
+									<a href="#" class="button small">More</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -101,9 +120,15 @@
 						</div>
 						<div class="content">
 							<h3>Metus gravida</h3>
-							<p>Sed egestas, ante et vulputate volutpat pede semper est luctus metus eu augue. Morbi purus amet libero.</p>
+							<p>
+								Sed egestas, ante et vulputate volutpat pede
+								semper est luctus metus eu augue. Morbi purus
+								amet libero.
+							</p>
 							<ul class="actions">
-								<li><a href="#" class="button small">More</a></li>
+								<li>
+									<a href="#" class="button small">More</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -113,9 +138,15 @@
 						</div>
 						<div class="content">
 							<h3>Faucibus lorem</h3>
-							<p>Sed egestas, ante et vulputate volutpat pede semper est luctus metus eu augue. Morbi purus amet libero.</p>
+							<p>
+								Sed egestas, ante et vulputate volutpat pede
+								semper est luctus metus eu augue. Morbi purus
+								amet libero.
+							</p>
 							<ul class="actions">
-								<li><a href="#" class="button small">More</a></li>
+								<li>
+									<a href="#" class="button small">More</a>
+								</li>
 							</ul>
 						</div>
 					</div>
