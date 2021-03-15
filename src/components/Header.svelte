@@ -7,7 +7,7 @@
 </script>
 
 <header id="header" class="alt">
-    <a class="logo" href="index.html">Inverse <span>by Pixelarity</span></a>
+    <a class="logo" href="/">The Van Diaries <span>by Kate & Chris</span></a>
     <nav id="nav">
         <ul>
             <li class={pathname === "/" ? "current" : ""}>
