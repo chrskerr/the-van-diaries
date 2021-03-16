@@ -1,6 +1,7 @@
-/* @import url(fontawesome-all.min.css); */
+
 @import "./icomoon/style.css";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -17,11 +18,13 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -3893,6 +3896,259 @@ input, select, textarea {
 		visibility: visible;
 	}
 
+/* Banner */
+
+	#banner {
+		background-color: #000000;
+		color: #ffffff;
+	}
+
+		#banner input, #banner select, #banner textarea {
+			color: #ffffff;
+		}
+
+		#banner a {
+			color: #ffffff;
+		}
+
+			#banner a:hover {
+				color: rgba(255, 255, 255, 0.65);
+			}
+
+		#banner strong, #banner b {
+			color: #ffffff;
+		}
+
+		#banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
+			color: #ffffff;
+		}
+
+		#banner blockquote {
+			border-left-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner code {
+			background: rgba(255, 255, 255, 0.075);
+			border-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner hr {
+			border-bottom-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner .box {
+			border-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner input[type="submit"],
+		#banner input[type="reset"],
+		#banner input[type="button"],
+		#banner button,
+		#banner .button {
+			background-color: transparent;
+			box-shadow: inset 0 0 0 1px #20c5e7;
+			color: #20c5e7 !important;
+		}
+
+			#banner input[type="submit"]:hover,
+			#banner input[type="reset"]:hover,
+			#banner input[type="button"]:hover,
+			#banner button:hover,
+			#banner .button:hover {
+				background-color: rgba(32, 197, 231, 0.1);
+			}
+
+				#banner input[type="submit"]:hover:active,
+				#banner input[type="reset"]:hover:active,
+				#banner input[type="button"]:hover:active,
+				#banner button:hover:active,
+				#banner .button:hover:active {
+					background-color: rgba(32, 197, 231, 0.25);
+				}
+
+			#banner input[type="submit"].primary,
+			#banner input[type="reset"].primary,
+			#banner input[type="button"].primary,
+			#banner button.primary,
+			#banner .button.primary {
+				background: #20c5e7;
+				box-shadow: none;
+				color: #ffffff !important;
+			}
+
+				#banner input[type="submit"].primary:hover,
+				#banner input[type="reset"].primary:hover,
+				#banner input[type="button"].primary:hover,
+				#banner button.primary:hover,
+				#banner .button.primary:hover {
+					background-color: rgba(32, 197, 231, 0.5);
+				}
+
+					#banner input[type="submit"].primary:hover:active,
+					#banner input[type="reset"].primary:hover:active,
+					#banner input[type="button"].primary:hover:active,
+					#banner button.primary:hover:active,
+					#banner .button.primary:hover:active {
+						background-color: rgba(32, 197, 231, 0.75);
+					}
+
+		#banner label {
+			color: #ffffff;
+		}
+
+		#banner input[type="text"],
+		#banner input[type="password"],
+		#banner input[type="email"],
+		#banner input[type="tel"],
+		#banner input[type="search"],
+		#banner input[type="url"],
+		#banner select,
+		#banner textarea {
+			border-color: rgba(255, 255, 255, 0.25);
+		}
+
+			#banner input[type="text"]:focus,
+			#banner input[type="password"]:focus,
+			#banner input[type="email"]:focus,
+			#banner input[type="tel"]:focus,
+			#banner input[type="search"]:focus,
+			#banner input[type="url"]:focus,
+			#banner select:focus,
+			#banner textarea:focus {
+				border-color: #20c5e7;
+				box-shadow: 0 0 0 1px #20c5e7;
+			}
+
+		#banner select {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(255, 255, 255, 0.25)' /%3E%3C/svg%3E");
+		}
+
+			#banner select option {
+				background-color: #000000;
+				color: #ffffff;
+			}
+
+		#banner input[type="checkbox"] + label,
+		#banner input[type="radio"] + label {
+			color: #ffffff;
+		}
+
+			#banner input[type="checkbox"] + label:before,
+			#banner input[type="radio"] + label:before {
+				border-color: rgba(255, 255, 255, 0.25);
+			}
+
+		#banner input[type="checkbox"]:checked + label:before,
+		#banner input[type="radio"]:checked + label:before {
+			border-color: #20c5e7;
+			color: #20c5e7;
+		}
+
+		#banner input[type="checkbox"]:focus + label:before,
+		#banner input[type="radio"]:focus + label:before {
+			border-color: #20c5e7;
+			box-shadow: 0 0 0 1px #20c5e7;
+		}
+
+		#banner ::-webkit-input-placeholder {
+			color: rgba(255, 255, 255, 0.4) !important;
+		}
+
+		#banner :-moz-placeholder {
+			color: rgba(255, 255, 255, 0.4) !important;
+		}
+
+		#banner ::-moz-placeholder {
+			color: rgba(255, 255, 255, 0.4) !important;
+		}
+
+		#banner :-ms-input-placeholder {
+			color: rgba(255, 255, 255, 0.4) !important;
+		}
+
+		#banner ul.alt li {
+			border-top-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner table tbody tr {
+			border-color: rgba(255, 255, 255, 0.25);
+		}
+
+			#banner table tbody tr:nth-child(2n + 1) {
+				background-color: rgba(255, 255, 255, 0.075);
+			}
+
+		#banner table th {
+			color: #ffffff;
+		}
+
+		#banner table thead {
+			border-bottom-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner table tfoot {
+			border-top-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner table.alt tbody tr td {
+			border-color: rgba(255, 255, 255, 0.25);
+		}
+
+		#banner ul.color-feature-icons li {
+			color: #ffffff;
+		}
+
+			#banner ul.color-feature-icons li .icon {
+				color: #ffffff;
+				border-color: #ffffff;
+			}
+
+		#banner .wrapper {
+			padding-top: 4rem;
+		}
+
+			#banner .wrapper > .inner > :last-child {
+				margin-bottom: 0;
+			}
+
+			#banner .wrapper > .inner > .image {
+				-moz-transition: opacity 1s ease-in-out, -moz-transform 1s ease-in-out;
+				-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+				-ms-transition: opacity 1s ease-in-out, -ms-transform 1s ease-in-out;
+				transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+			}
+
+			#banner .wrapper > .inner > .feature-icons {
+				-moz-transition: opacity 1s ease-in-out, -moz-transform 1s ease-in-out;
+				-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+				-ms-transition: opacity 1s ease-in-out, -ms-transform 1s ease-in-out;
+				transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+			}
+
+			@media screen and (max-width: 1280px) {
+
+				#banner .wrapper {
+					padding-top: 2.5rem;
+				}
+
+			}
+
+		body.is-preload #banner .wrapper > .inner > .image {
+			-moz-transform: scale(0.9875);
+			-webkit-transform: scale(0.9875);
+			-ms-transform: scale(0.9875);
+			transform: scale(0.9875);
+			opacity: 0;
+		}
+
+		body.is-preload #banner .wrapper > .inner > .feature-icons {
+			-moz-transform: translateY(0.5rem);
+			-webkit-transform: translateY(0.5rem);
+			-ms-transform: translateY(0.5rem);
+			transform: translateY(0.5rem);
+			opacity: 0;
+		}
+
 /* Footer */
 
 	#footer {
@@ -4252,8 +4508,4 @@ input, select, textarea {
 	border: none !important;
 	background: transparent !important;
 	font-size: 150%;
-}
-
-.leaflet-container {
-	opacity: 1 !important;
 }

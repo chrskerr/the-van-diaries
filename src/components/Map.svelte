@@ -15,11 +15,11 @@
         if (browser) {
             const L = await import("leaflet");
             const GeoSearch = await import("leaflet-geosearch");
-            await import("leaflet-providers");
 
             const map = L.map("map").setView(centre, zoom);
             L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                detectRetina: true,
             }).addTo(map);
             setTimeout(() => map.invalidateSize(), 50);
 
@@ -47,10 +47,6 @@
 <style>
     #map {
         width: 100%;
-        opacity: 0;
-        background: transparent;
-        transition: opacity 400ms;
-        will-change: opacity;
     }
     .large {
         height: 32rem;

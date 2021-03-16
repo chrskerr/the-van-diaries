@@ -12,10 +12,12 @@
         <div class="inner">
             <h1 class="heading alt">The Van Diaries</h1>
             <p>Remembering where we've been, and helping others share our adventure</p>
-            <div class="image fit special">
-                <Map zoom={4} centre={[-27, 134]} size="large" />
-            </div>
         </div>
+    </div>
+</div>
+<div class="map-container-wrapper">
+    <div class="map-container">
+        <Map zoom={4} centre={[-27, 134]} size="large" />
     </div>
 </div>
 
@@ -134,67 +136,19 @@
 <Footer />
 
 <style>
-    .fit {
+    .map-container-wrapper {
+        padding-bottom: 4rem;
+        background-color: #20c5e7;
+    }
+
+    .map-container {
         width: 80%;
+        margin: 0 auto;
     }
 
     @media screen and (max-width: 980px) {
-        .fit {
+        .map-container {
             width: 100%;
         }
-    }
-
-    #banner {
-        background-color: #000000;
-        color: #ffffff;
-    }
-
-    #banner h1 {
-        color: #ffffff;
-    }
-
-    #banner ::-webkit-input-placeholder {
-        color: rgba(255, 255, 255, 0.4) !important;
-    }
-
-    #banner :-moz-placeholder {
-        color: rgba(255, 255, 255, 0.4) !important;
-    }
-
-    #banner ::-moz-placeholder {
-        color: rgba(255, 255, 255, 0.4) !important;
-    }
-
-    #banner :-ms-input-placeholder {
-        color: rgba(255, 255, 255, 0.4) !important;
-    }
-
-    #banner .wrapper {
-        padding-top: 4rem;
-    }
-
-    #banner .wrapper > .inner > :last-child {
-        margin-bottom: 0;
-    }
-
-    #banner .wrapper > .inner > .image {
-        -moz-transition: opacity 1s ease-in-out, -moz-transform 1s ease-in-out;
-        -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
-        -ms-transition: opacity 1s ease-in-out, -ms-transform 1s ease-in-out;
-        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    }
-
-    @media screen and (max-width: 1280px) {
-        #banner .wrapper {
-            padding-top: 2.5rem;
-        }
-    }
-
-    body.is-preload #banner .wrapper > .inner > .image {
-        -moz-transform: scale(0.9875);
-        -webkit-transform: scale(0.9875);
-        -ms-transform: scale(0.9875);
-        transform: scale(0.9875);
-        opacity: 0;
     }
 </style>
