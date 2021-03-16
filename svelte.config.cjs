@@ -1,12 +1,23 @@
 /** @type {import('@sveltejs/kit').Config} */
-module.exports = {
-	kit: {
-		// By default, `npm run build` will create a standard Node app.
-		// You can create optimized builds for different platforms by
-		// specifying a different adapter
-		adapter: '@sveltejs/adapter-static',
+const sveltePreprocess = require( "svelte-preprocess" );
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
-	}
+module.exports = {
+	compilerOptions: { 
+		hydratable: true,
+	},
+	kit: {
+		adapter: "@sveltejs/adapter-static",
+		target: "#svelte",
+		files: {
+			lib: "node_modules",
+		},
+
+	},
+	preprocess: sveltePreprocess({
+		postcss: {
+			plugins: [
+				require( "autoprefixer" )(),
+			],
+		},
+	}),
 };

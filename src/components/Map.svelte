@@ -6,8 +6,6 @@
     import { browser } from "$app/env";
     import { onMount } from "svelte";
     import _ from "lodash";
-    import "../../node_modules/leaflet/dist/leaflet.css";
-    import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
 
     const markers = [{ name: "Derby", latLng: [-41.14213260110557, 147.79722207630516] }];
 
@@ -45,6 +43,9 @@
 <div id="map" class={`${size}`} />
 
 <style>
+    @import "$lib/leaflet/dist/leaflet.css";
+    @import "$lib/leaflet-geosearch/dist/geosearch.css";
+
     #map {
         width: 100%;
     }

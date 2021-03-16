@@ -24,7 +24,7 @@
                         <h4>Post {post}</h4>
                         <h6>Date...</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed at molestiae odio, consectetur iste reiciendis delectus aut aperiam quae omnis dolore asperiores eveniet mollitia iusto quia ad quas, non modi?</p>
-                        <a href="#" class="button small">Read More</a>
+                        <a href={`/posts/${post}`} class="button small">Read More</a>
                     </div>
                 {/each}
             </div>
