@@ -20,7 +20,3 @@
         </ul>
     </nav>
 </header>
-
-<style global>
-    @import "$components/css/main.css";
-</style>
