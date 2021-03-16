@@ -1,36 +1,7 @@
 <script>
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
-
-    import "../../node_modules/leaflet/dist/leaflet.css";
-    import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
-
-    import { onMount } from "svelte";
-    onMount(() => {
-        import("leaflet").then(L => {
-            import("leaflet-providers").then(() => {
-                import("leaflet-geosearch").then(GeoSearch => {
-                    const map = L.map("map").setView([-27, 134], 4);
-
-                    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-                    }).addTo(map);
-
-                    map.addControl(
-                        new GeoSearch.GeoSearchControl({
-                            provider: new GeoSearch.OpenStreetMapProvider(),
-                            style: "bar",
-                        }),
-                    );
-
-                    const icon = L.divIcon({ html: "<span class='feather-location' />" });
-                    L.marker([-41.14213260110557, 147.79722207630516], { icon }).addTo(map);
-
-                    setTimeout(() => map.invalidateSize(), 50);
-                });
-            });
-        });
-    });
+    import Map from "$components/Map.svelte";
 </script>
 
 <Header />
@@ -40,9 +11,9 @@
     <div class="wrapper style1 special">
         <div class="inner">
             <h1 class="heading alt">The Van Diaries</h1>
-            <p>Lorem feugiat consequat phasellus ultrices nulla quis nibh lorem ligula</p>
+            <p>Remembering where we've been, and helping others share our adventure</p>
             <div class="image fit special">
-                <div id="map" />
+                <Map zoom={4} centre={[-27, 134]} size="large" />
             </div>
         </div>
     </div>
@@ -163,11 +134,6 @@
 <Footer />
 
 <style>
-    #map {
-        width: 100%;
-        height: 32rem;
-    }
-
     .fit {
         width: 80%;
     }

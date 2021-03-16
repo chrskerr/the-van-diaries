@@ -4253,3 +4253,7 @@ input, select, textarea {
 	background: transparent !important;
 	font-size: 150%;
 }
+
+.leaflet-container {
+	opacity: 1 !important;
+}

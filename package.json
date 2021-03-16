@@ -23,5 +23,6 @@
 		"leaflet-geosearch": "^3.2.2",
 		"leaflet-providers": "^1.11.0",
 		"lodash": "^4.17.21"
-	}
+	},
+	"license": "MIT"
 }

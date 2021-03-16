@@ -1,8 +1,9 @@
 <script>
     import { afterUpdate } from "svelte";
+
     let pathname;
     afterUpdate(() => {
-        if (window && "location" in window && window.location && "pathname" in window.location) pathname = window.location.pathname;
+        pathname = window.location.pathname;
     });
 </script>
 
