@@ -19,6 +19,9 @@
 		"node": ">= 12.17.0"
 	},
 	"dependencies": {
+		"leaflet": "^1.7.1",
+		"leaflet-geosearch": "^3.2.2",
+		"leaflet-providers": "^1.11.0",
 		"lodash": "^4.17.21"
 	}
 }

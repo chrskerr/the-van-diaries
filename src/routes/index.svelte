@@ -1,6 +1,36 @@
 <script>
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
+
+    import "../../node_modules/leaflet/dist/leaflet.css";
+    import "../../node_modules/leaflet-geosearch/dist/geosearch.css";
+
+    import { onMount } from "svelte";
+    onMount(() => {
+        import("leaflet").then(L => {
+            import("leaflet-providers").then(() => {
+                import("leaflet-geosearch").then(GeoSearch => {
+                    const map = L.map("map").setView([-27, 134], 4);
+
+                    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                    }).addTo(map);
+
+                    map.addControl(
+                        new GeoSearch.GeoSearchControl({
+                            provider: new GeoSearch.OpenStreetMapProvider(),
+                            style: "bar",
+                        }),
+                    );
+
+                    const icon = L.divIcon({ html: "<span class='feather-location' />" });
+                    L.marker([-41.14213260110557, 147.79722207630516], { icon }).addTo(map);
+
+                    setTimeout(() => map.invalidateSize(), 50);
+                });
+            });
+        });
+    });
 </script>
 
 <Header />
@@ -12,7 +42,7 @@
             <h1 class="heading alt">The Van Diaries</h1>
             <p>Lorem feugiat consequat phasellus ultrices nulla quis nibh lorem ligula</p>
             <div class="image fit special">
-                <img src="images/pic01.jpg" alt="" />
+                <div id="map" />
             </div>
         </div>
     </div>
@@ -131,3 +161,74 @@
 </div>
 
 <Footer />
+
+<style>
+    #map {
+        width: 100%;
+        height: 32rem;
+    }
+
+    .fit {
+        width: 80%;
+    }
+
+    @media screen and (max-width: 980px) {
+        .fit {
+            width: 100%;
+        }
+    }
+
+    #banner {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    #banner h1 {
+        color: #ffffff;
+    }
+
+    #banner ::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    #banner :-moz-placeholder {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    #banner ::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    #banner :-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    #banner .wrapper {
+        padding-top: 4rem;
+    }
+
+    #banner .wrapper > .inner > :last-child {
+        margin-bottom: 0;
+    }
+
+    #banner .wrapper > .inner > .image {
+        -moz-transition: opacity 1s ease-in-out, -moz-transform 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out, -ms-transform 1s ease-in-out;
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+    @media screen and (max-width: 1280px) {
+        #banner .wrapper {
+            padding-top: 2.5rem;
+        }
+    }
+
+    body.is-preload #banner .wrapper > .inner > .image {
+        -moz-transform: scale(0.9875);
+        -webkit-transform: scale(0.9875);
+        -ms-transform: scale(0.9875);
+        transform: scale(0.9875);
+        opacity: 0;
+    }
+</style>

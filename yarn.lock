@@ -583,6 +583,23 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
+leaflet-geosearch@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/leaflet-geosearch/-/leaflet-geosearch-3.2.2.tgz#88a6a88a330e7e4b37471635c70b864057786981"
+  integrity sha512-pRyu2E0x4TJTK4R0IjegkfEXUvGS2Ns1dxqKCd/aZgzKK4fIxub1KLh/TQEpZXsKCVaP/+DSC3N+9b+f2GBbVw==
+  optionalDependencies:
+    leaflet "^1.6.0"
+
+leaflet-providers@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/leaflet-providers/-/leaflet-providers-1.11.0.tgz#e3787c2a45cc1baaaaedd9251a564e88ae882046"
+  integrity sha512-eu/28vrWZqxv9+fXze/4ZwbjHgaWjyeLS5fDtk95W/myDBRAyaAca/5an6WFSheYyhohuLy94vpBLuGHFXiJog==
+
+leaflet@^1.6.0, leaflet@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.7.1.tgz#10d684916edfe1bf41d688a3b97127c0322a2a19"
+  integrity sha512-/xwPEBidtg69Q3HlqPdU3DnrXQOvQU/CCHA1tcDQVzOwm91YMYaILjNp7L4Eaw5Z4sOYdbBz6koWyibppd8Zqw==
+
 levn@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.4.1.tgz#ae4562c007473b932a6200d403268dd2fffc6ade"
