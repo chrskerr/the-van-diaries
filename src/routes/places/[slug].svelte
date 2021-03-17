@@ -11,7 +11,7 @@
 
         return {
             status: 301,
-            redirect: "/posts",
+            redirect: "/places",
         };
     }
 </script>
