@@ -3499,24 +3499,24 @@ input, select, textarea {
 			padding: 2rem;
 		}
 
-		#header > nav {
+		#header nav {
 			margin: 0;
 		}
 
-			#header > nav > ul {
+			#header nav > ul {
 				list-style: none;
 				margin: 0;
 				padding: 0;
 			}
 
-				#header > nav > ul > li {
+				#header nav > ul > li {
 					display: inline-block;
 					margin: 0 .15rem;
 					position: relative;
 					text-align: center;
 				}
 
-					#header > nav > ul > li > a {
+					#header nav > ul > li > a {
 						-moz-transition: box-shadow 0.2s ease-in-out;
 						-webkit-transition: box-shadow 0.2s ease-in-out;
 						-ms-transition: box-shadow 0.2s ease-in-out;
@@ -3530,19 +3530,19 @@ input, select, textarea {
 						text-decoration: none;
 					}
 
-						#header > nav > ul > li.current > a {
+						#header nav > ul > li.current > a {
 							box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 						}
 
-						#header > nav > ul > li > a:hover {
+						#header nav > ul > li > a:hover {
 							box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 						}
 
-						#header > nav > ul > li > a.dropdown {
+						#header nav > ul > li > a.dropdown {
 							padding-left: 2.5rem;
 						}
 
-							#header > nav > ul > li > a.dropdown:before {
+							#header nav > ul > li > a.dropdown:before {
 								-moz-transition: background-image 0.2s ease-in-out;
 								-webkit-transition: background-image 0.2s ease-in-out;
 								-ms-transition: background-image 0.2s ease-in-out;
@@ -3569,15 +3569,15 @@ input, select, textarea {
 								width: 1rem;
 							}
 
-							#header > nav > ul > li > a.dropdown:hover:before {
+							#header nav > ul > li > a.dropdown:hover:before {
 								background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cstyle%3Eline %7Bstroke: %23fff%3Bstroke-width: 5px%3B%7D%3C/style%3E%3Cline x1='32' y1='16' x2='64' y2='48' /%3E%3Cline x1='32' y1='80' x2='64' y2='48' /%3E%3C/svg%3E");
 							}
 
-					#header > nav > ul > li > ul {
+					#header nav > ul > li > ul {
 						display: none;
 					}
 
-					#header > nav > ul > li.active > a {
+					#header nav > ul > li.active > a {
 						color: #ffffff;
 					}
 
@@ -3623,16 +3623,6 @@ input, select, textarea {
 						margin-bottom: 0;
 						margin-top: 1.25rem;
 					}
-
-				#header > nav li {
-					margin: 0 !important;
-					padding: 0 !important;
-				}
-
-				#header > nav a {
-					font-size: 0.8rem;
-					padding: 0.25rem 0.5rem !important;
-				}
 
 				#header > .logo {
 					font-size: 1rem;

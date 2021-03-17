@@ -11,6 +11,12 @@
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
     import Map from "$components/Map.svelte";
+
+    let width;
+    import { onMount } from "svelte";
+    onMount(() => {
+        width = window.innerWidth;
+    });
 </script>
 
 <Header />
@@ -26,7 +32,7 @@
 </div>
 <div class="map-container-wrapper">
     <div class="map-container">
-        <Map zoom={4} centre={[-27, 134]} size="large" markers={places} />
+        <Map zoom={width && width < 980 ? 3 : 4} centre={[-27, 134]} size="large" markers={places} />
     </div>
 </div>
 
