@@ -32,7 +32,7 @@
             <header class="major">
                 <h1>{post.title}</h1>
                 <div class="post-header-map">
-                    <Map centre={post.latLng} zoom={13} size="small" markers={[post]} preventInteraction={true} />
+                    <Map centre={post.latLng} zoom={12} size="small" markers={[post]} preventInteraction={true} />
                 </div>
                 <p>{post.summary}</p>
             </header>
@@ -51,14 +51,6 @@
 <style>
     .major > p {
         font-size: 1.5rem;
-    }
-    .major > p::after {
-        background-color: #20c5e7;
-        content: "";
-        display: block;
-        height: 2px;
-        margin: 2rem auto 4rem auto;
-        width: 4rem;
     }
     .major > .post-header-map {
         margin: 0 0 2rem 0;

@@ -5,7 +5,7 @@ latLng: [-37.05110609710724, 144.2176183774844]
 date: 2021-03-17
 image: ../images/chris-derby.jpg
 summary: A beautiful town with awesome cafes, heaps of art & culture, and huge mountain bike trails nearby.
-category: [sleeping, mountain-biking]
+categories: ["stealth-camping", "mountain-biking", "foodie"]
 ---
 
 We visited Castlemaine on 17 March 2021, after driving in from Maryborough and what an upgrade it was!

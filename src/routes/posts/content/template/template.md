@@ -5,7 +5,7 @@ latLng: [copy from google maps, keep the square brackets]
 date: yyyy-mm-dd
 image: ../images/file.jpg - add an image to the static/images folder, then put its name here
 summary: A short description of the thing which will show at the top of the blog post and in the blogs page
-category: ["sleeping", "mountain-biking", "cafe", "other"] - delete these words and those which do not apply
+categories: ["paid-camping", "free-camping", "stealth-camping", "mountain-biking", "foodie", "other"] - delete these words and those which do not apply
 ---
 
 # Markdown Guide

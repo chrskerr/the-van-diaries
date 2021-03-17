@@ -35,15 +35,12 @@
     <div class="wrapper special">
         <div class="inner">
             <header class="major">
-                <h2>Amet magna adipiscing</h2>
+                <h2>The Rocketship</h2>
             </header>
             <div class="image fit special">
-                <img src="images/pic02.jpg" alt="" />
+                <img src="images/rocketship-small.jpg" alt="" />
             </div>
-            <p class="special">Sed egestas, ante et vulputate volutpat pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum lorem ipsum dolor sit amet consequat hendrerit tortor semper lorem at felis.</p>
-            <ul class="actions">
-                <li><a href="#" class="button">Details</a></li>
-            </ul>
+            <p class="special">We bought our Ford Transit early 2020 and took the year custom fitting it in preparation for a major adventure!</p>
         </div>
     </div>
 </div>
@@ -55,24 +52,21 @@
             <div class="spotlights">
                 <div class="intro">
                     <header>
-                        <h2 class="left">Eu ligula<br /> consequat</h2>
-                        <p>Sed egestas, ante et vulputate volutpat pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.</p>
+                        <h2 class="left">Us</h2>
+                        <p class="left">Sed egestas, ante et vulputate volutpat pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.</p>
                     </header>
-                    <ul class="actions">
-                        <li><a href="#" class="button">Details</a></li>
-                    </ul>
                 </div>
                 <div class="spotlight">
                     <div class="image fit">
-                        <img src="images/pic03.jpg" alt="" />
+                        <img src="images/kate.jpg" alt="Kate Hobbs" />
                     </div>
-                    <div class="content">Magna sed tempus</div>
+                    <div class="content">Kate Hobbs</div>
                 </div>
                 <div class="spotlight">
                     <div class="image fit">
-                        <img src="images/pic04.jpg" alt="" />
+                        <img src="images/chris.jpg" alt="Chris Kerr" />
                     </div>
-                    <div class="content">Lorem ipsum dolor</div>
+                    <div class="content">Chris Kerr</div>
                 </div>
             </div>
         </div>
@@ -134,11 +128,6 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <ul class="actions">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </footer>
     </div>
 </div>
 
@@ -159,5 +148,11 @@
         .map-container {
             width: 100%;
         }
+    }
+
+    .image img {
+        max-height: 14rem;
+        object-fit: cover;
+        object-position: center center;
     }
 </style>

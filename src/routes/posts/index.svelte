@@ -28,8 +28,16 @@
             <div class="posts-container">
                 {#each sortedPosts as post, i}
                     <div class={`post ${i % 2 === 0 ? "left" : ""} ${(posts.length % 2 === 0 ? i === posts.length - 1 || i === posts.length - 2 : i === posts.length - 1) ? "last-row" : ""}`}>
-                        <h3>{post.title}</h3>
+                        <h3><a sveltekit:prefetch href={`/posts/${post.slug}`}>{post.title}</a></h3>
                         <h6>{format(parseISO(post.date), "do MMMM yyyy")}</h6>
+                        {#if post.categories}
+                            <h5>
+                                {_.join(
+                                    _.map(post.categories, cat => _.startCase(cat)),
+                                    ", ",
+                                )}
+                            </h5>
+                        {/if}
                         <p>{post.summary}</p>
                         <a sveltekit:prefetch href={`/posts/${post.slug}`} class="button small">Read More</a>
                     </div>
@@ -61,10 +69,11 @@
         border-right: dotted lightgrey 1px;
     }
 
-    .posts-container > .post > h4 {
+    .posts-container > .post > h3,
+    .posts-container > .post > h6 {
         margin-bottom: 0.75rem;
     }
-    .posts-container > .post > h6,
+    .posts-container > .post > h5,
     .posts-container > .post > p {
         margin-bottom: 1rem;
     }

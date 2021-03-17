@@ -205,6 +205,19 @@ input, select, textarea {
 		width: 4rem;
 	}
 
+	header p:after {
+		background-color: #20c5e7;
+		content: '';
+		display: block;
+		height: 2px;
+		margin: 2rem auto 4rem auto;
+		width: 4rem;
+	}
+		header p.left:after {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
 	header h1.left:before, header h2.left:before, header h3.left:before, header h4.left:before, header h5.left:before, header h6.left:before {
 		margin-left: 0;
 		margin-right: 0;
