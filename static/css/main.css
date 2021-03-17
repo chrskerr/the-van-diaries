@@ -3493,6 +3493,7 @@ input, select, textarea {
 			#header > .logo span {
 				color: #ffffff;
 				font-weight: 300;
+				font-size: 90%;
 			}
 
 		#header.alt {
@@ -3629,11 +3630,6 @@ input, select, textarea {
 					line-height: 60px;
 					padding: 0;
 				}
-
-				#header > .logo > span {
-					font-size: 0.8rem;
-				}
-
 		}
 
 		@media screen and (max-width: 736px) {
