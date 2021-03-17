@@ -1,6 +1,6 @@
 <script context="module">
     export async function load({ page, fetch }) {
-        const url = `/posts/${page.params.slug}.json`;
+        const url = `/writing/${page.params.slug}.json`;
         const res = await fetch(url);
 
         if (res.ok) {
@@ -17,7 +17,7 @@
 </script>
 
 <script>
-    export let post;
+    export let place;
 
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
@@ -30,18 +30,20 @@
     <div class="wrapper">
         <div class="inner">
             <header class="major">
-                <h1>{post.title}</h1>
-                <div class="post-header-map">
-                    <Map centre={post.latLng} zoom={12} size="small" markers={[post]} preventInteraction={true} />
-                </div>
-                <p>{post.summary}</p>
+                <h1>{place.title}</h1>
+                {#if place.latLng}
+                    <div class="post-header-map">
+                        <Map centre={place.latLng} zoom={12} size="small" markers={[place]} preventInteraction={true} />
+                    </div>
+                {/if}
+                <p>{place.summary}</p>
             </header>
-            {#if post.image}
+            {#if place.image}
                 <div class="image right">
-                    <img src={post.image} alt="" />
+                    <img src={place.image} alt="" />
                 </div>
             {/if}
-            {@html post.html}
+            {@html place.html}
         </div>
     </div>
 </div>
@@ -49,6 +51,10 @@
 <Footer />
 
 <style>
+    * {
+        animation: fadein 250ms;
+    }
+
     .major > p {
         font-size: 1.5rem;
     }

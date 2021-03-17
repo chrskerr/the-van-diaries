@@ -4,15 +4,15 @@ import fm from "front-matter";
 import marked from "marked";
 import _ from "lodash";
 
-export async function get( request, context ) {
-	const files = fs.readdirSync( "src/routes/posts/content" );
+export async function get () {
+	const files = fs.readdirSync( "src/routes/places/content" );
 
 	if ( files && _.size( files ) > 0 ) {
 		return {
 			body: {
-				posts: _.compact( _.map( files, file => {
+				places: _.compact( _.map( files, file => {
 					if ( !_.endsWith( file, ".md" )) return false;
-					const fileRes = fs.readFileSync( `src/routes/posts/content/${file}`, { encoding: "utf-8" });
+					const fileRes = fs.readFileSync( `src/routes/places/content/${file}`, { encoding: "utf-8" });
 					const { body, attributes } = fm( fileRes );
 					const html = marked( body );
 					return { html, ...attributes };

@@ -1,12 +1,12 @@
 <script context="module">
     export async function load({ fetch }) {
-        const res = await fetch("./posts/posts.json");
+        const res = await fetch("/places/places.json");
         return { props: await res.json() };
     }
 </script>
 
 <script>
-    export let posts = [];
+    export let places = [];
 
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
@@ -26,7 +26,7 @@
 </div>
 <div class="map-container-wrapper">
     <div class="map-container">
-        <Map zoom={4} centre={[-27, 134]} size="large" markers={posts} />
+        <Map zoom={4} centre={[-27, 134]} size="large" markers={places} />
     </div>
 </div>
 
@@ -134,6 +134,14 @@
 <Footer />
 
 <style>
+    * {
+        animation: fadein 250ms;
+    }
+
+    #banner {
+        background-color: #20c5e7;
+    }
+
     .map-container-wrapper {
         padding-bottom: 4rem;
         background-color: #20c5e7;
@@ -141,6 +149,7 @@
 
     .map-container {
         width: 80%;
+        max-width: 85vw;
         margin: 0 auto;
     }
 

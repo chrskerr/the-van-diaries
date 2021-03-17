@@ -53,3 +53,9 @@
         <div class="copyright">&copy; Kate & Chris. All rights reserved and other similar stuff.</div>
     </div>
 </div>
+
+<style>
+    * {
+        animation: fadein 250ms;
+    }
+</style>

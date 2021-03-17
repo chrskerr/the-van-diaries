@@ -14,8 +14,8 @@
             <li class={pathname === "/" ? "current" : ""}>
                 <a href="/">Map</a>
             </li>
-            <li class={pathname === "/posts" ? "current" : ""}>
-                <a href="/posts">Posts</a>
+            <li class={pathname === "/places" ? "current" : ""}>
+                <a href="/places">Places</a>
             </li>
         </ul>
     </nav>
