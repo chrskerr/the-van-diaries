@@ -1,9 +1,7 @@
 // Consult https://vitejs.dev/config/ to learn about these options
-import { join, resolve } from "path";
-import { readFileSync } from "fs";
-import { cwd } from "process";
+import { resolve } from "path";
 
-import { plugin, Mode } from "vite-plugin-markdown";
+import { plugin } from "vite-plugin-markdown";
 
 /** @type {import('vite').UserConfig} */
 export default {
@@ -13,6 +11,6 @@ export default {
 		},
 	},
 	plugins: [
-		plugin({ mode: [ Mode.HTML ]}),
+		plugin(),
 	],
 };

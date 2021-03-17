@@ -11,6 +11,9 @@
     import { format, parseISO } from "date-fns";
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
+    import _ from "lodash";
+
+    const sortedPosts = _.orderBy(posts, ["date"], ["desc"]);
 </script>
 
 <Header />
@@ -23,7 +26,7 @@
                 <p>The places we've been, especially those we've loved</p>
             </header>
             <div class="posts-container">
-                {#each posts as post, i}
+                {#each sortedPosts as post, i}
                     <div class={`post ${i % 2 === 0 ? "left" : ""} ${(posts.length % 2 === 0 ? i === posts.length - 1 || i === posts.length - 2 : i === posts.length - 1) ? "last-row" : ""}`}>
                         <h3>{post.title}</h3>
                         <h6>{format(parseISO(post.date), "do MMMM yyyy")}</h6>
