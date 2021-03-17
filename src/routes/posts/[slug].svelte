@@ -10,8 +10,8 @@
         }
 
         return {
-            status: res.status,
-            // redirect: "/posts",
+            status: 301,
+            redirect: "/posts",
         };
     }
 </script>
@@ -36,10 +36,11 @@
                 </div>
                 <p>{post.summary}</p>
             </header>
-            <div class="major" />
-            <div class="image right">
-                <img src={post.image} alt="" />
-            </div>
+            {#if post.image}
+                <div class="image right">
+                    <img src={post.image} alt="" />
+                </div>
+            {/if}
             {@html post.html}
         </div>
     </div>
@@ -61,5 +62,17 @@
     }
     .major > .post-header-map {
         margin: 0 0 2rem 0;
+    }
+    .inner {
+        overflow: auto;
+    }
+    .image {
+        max-height: 20rem;
+    }
+    .image > img {
+        height: 100%;
+        max-height: 20rem;
+        object-fit: cover;
+        object-position: center center;
     }
 </style>
