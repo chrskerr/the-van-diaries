@@ -22,7 +22,7 @@
     <div class="wrapper">
         <div class="inner">
             <header class="major">
-                <h1>Campsites</h1>
+                <h1>Posts</h1>
                 <p>The places we've been, especially those we've loved</p>
             </header>
             <div class="posts-container">
