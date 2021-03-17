@@ -11,7 +11,6 @@ module.exports = {
 		files: {
 			lib: "node_modules",
 		},
-
 	},
 	preprocess: sveltePreprocess({
 		postcss: {

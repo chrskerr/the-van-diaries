@@ -1,6 +1,6 @@
 <div id="footer">
     <div class="wrapper style2">
-        <div class="inner">
+        <!-- <div class="inner">
             <header class="major">
                 <h2>Get in touch</h2>
                 <p>Sed egestas, ante et vulputate volutpat pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum lorem ipsum dolor sit amet consequat hendrerit tortor semper lorem at felis.</p>
@@ -49,7 +49,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="copyright">&copy; Untitled. All rights reserved. Lorem ipsum dolor sit amet.</div>
+        </div> -->
+        <div class="copyright">&copy; Kate & Chris. All rights reserved and other similar stuff.</div>
     </div>
 </div>

@@ -2,39 +2,45 @@
     export let size;
     export let zoom;
     export let centre;
+    export let markers;
+    export let preventInteraction = false;
 
+    import { goto, prefetch } from "$app/navigation";
     import { browser } from "$app/env";
     import { onMount } from "svelte";
-    import _ from "lodash";
-
-    const markers = [{ name: "Derby", latLng: [-41.14213260110557, 147.79722207630516] }];
 
     onMount(async () => {
         if (browser) {
             const L = await import("leaflet");
             const GeoSearch = await import("leaflet-geosearch");
 
-            const map = L.map("map").setView(centre, zoom);
+            const map = L.map("map", { zoomControl: !preventInteraction }).setView(centre, zoom);
             L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
                 detectRetina: true,
             }).addTo(map);
             setTimeout(() => map.invalidateSize(), 50);
 
-            map.addControl(
-                new GeoSearch.GeoSearchControl({
-                    provider: new GeoSearch.OpenStreetMapProvider(),
-                    style: "bar",
-                }),
-            );
+            if (!preventInteraction)
+                map.addControl(
+                    new GeoSearch.GeoSearchControl({
+                        provider: new GeoSearch.OpenStreetMapProvider(),
+                        style: "bar",
+                    }),
+                );
 
             const icon = L.divIcon({ html: "<span class='feather-location' />" });
-            _.forEach(markers, ({ name, latLng }) => {
-                const marker = L.marker(latLng, { icon }).addTo(map).bindTooltip(name, { direction: "top" });
+            markers.forEach(({ title, latLng, slug }) => {
+                const marker = L.marker(latLng, { icon }).addTo(map).bindTooltip(title, { direction: "top" });
 
-                marker.on("click", e => {
-                    console.log(e);
-                });
+                if (!preventInteraction) {
+                    marker.on("click", () => {
+                        goto(`/posts/${slug}`);
+                    });
+                    marker.on("mouseover", () => {
+                        prefetch(`/posts/${slug}`);
+                    });
+                }
             });
         }
     });

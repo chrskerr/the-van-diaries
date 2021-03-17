@@ -1,30 +1,34 @@
+<script context="module">
+    export async function load({ fetch }) {
+        const res = await fetch("/posts/posts.json");
+        return { props: await res.json() };
+    }
+</script>
+
 <script>
+    export let posts = [];
+
+    import { format, parseISO } from "date-fns";
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
-
-    const posts = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 </script>
 
 <Header />
 
-<!-- One -->
 <div id="main">
     <div class="wrapper">
         <div class="inner">
             <header class="major">
                 <h1>Campsites</h1>
-                <p>Elit massa nisl elementum lorem ipsum dolor sit consequat</p>
+                <p>The places we've been, especially those we've loved</p>
             </header>
-            <div class="image main">
-                <img src="images/pic01.jpg" alt="" />
-            </div>
             <div class="posts-container">
                 {#each posts as post, i}
                     <div class={`post ${i % 2 === 0 ? "left" : ""} ${(posts.length % 2 === 0 ? i === posts.length - 1 || i === posts.length - 2 : i === posts.length - 1) ? "last-row" : ""}`}>
-                        <h4>Post {post}</h4>
-                        <h6>Date...</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed at molestiae odio, consectetur iste reiciendis delectus aut aperiam quae omnis dolore asperiores eveniet mollitia iusto quia ad quas, non modi?</p>
-                        <a href={`/posts/${post}`} class="button small">Read More</a>
+                        <h3>{post.title}</h3>
+                        <h6>{format(parseISO(post.date), "do MMMM yyyy")}</h6>
+                        <p>{post.summary}</p>
+                        <a sveltekit:prefetch href={`/posts/${post.slug}`} class="button small">Read More</a>
                     </div>
                 {/each}
             </div>

@@ -1,4 +1,13 @@
+<script context="module">
+    export async function load({ fetch }) {
+        const res = await fetch("./posts/posts.json");
+        return { props: await res.json() };
+    }
+</script>
+
 <script>
+    export let posts = [];
+
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
     import Map from "$components/Map.svelte";
@@ -17,7 +26,7 @@
 </div>
 <div class="map-container-wrapper">
     <div class="map-container">
-        <Map zoom={4} centre={[-27, 134]} size="large" />
+        <Map zoom={4} centre={[-27, 134]} size="large" markers={posts} />
     </div>
 </div>
 

@@ -3,7 +3,7 @@ import { join, resolve } from "path";
 import { readFileSync } from "fs";
 import { cwd } from "process";
 
-const pkg = JSON.parse( readFileSync( join( cwd(), "package.json" )));
+import { plugin, Mode } from "vite-plugin-markdown";
 
 /** @type {import('vite').UserConfig} */
 export default {
@@ -12,7 +12,7 @@ export default {
 			$components: resolve( "src/components" ),
 		},
 	},
-	ssr: {
-		noExternal: Object.keys( pkg.dependencies || {}),
-	},
+	plugins: [
+		plugin({ mode: [ Mode.HTML ]}),
+	],
 };
