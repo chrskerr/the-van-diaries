@@ -4427,3 +4427,22 @@ input, select, textarea {
 	background: transparent !important;
 	font-size: 150%;
 }
+
+/* Blog Posts  */
+
+.blog-post-body h1,
+.blog-post-body h2,
+.blog-post-body h3,
+.blog-post-body h4,
+.blog-post-body h5,
+.blog-post-body h6 {
+	margin-bottom: 0.5rem;
+}
+
+p, ul, ol {
+	margin-bottom: 1.5rem;
+}
+
+p + ul, p + ol {
+	margin-top: -0.5rem;
+}
