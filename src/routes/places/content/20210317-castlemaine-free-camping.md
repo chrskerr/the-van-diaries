@@ -1,6 +1,5 @@
 ---
 title: Castlemaine Free Camping
-slug: 20210317-castlemaine-free-camping
 latLng: [-37.05110609710724, 144.2176183774844]
 date: 2021-03-17
 image: ../images/chris-derby.jpg

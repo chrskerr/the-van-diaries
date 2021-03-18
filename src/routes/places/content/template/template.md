@@ -1,6 +1,5 @@
 ---
 title: Main Heading of the Page
-slug: THIS MUST BE THE EXACT SAME AS THE FILENAME, EXCEPT THE .md BIT AT THE END
 latLng: [copy from google maps, keep the square brackets]
 date: yyyy-mm-dd
 image: ../images/file.jpg - add an image to the static/images folder, then put its name here

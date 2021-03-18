@@ -35,10 +35,10 @@
 
                 if (!preventInteraction) {
                     marker.on("click", () => {
-                        goto(`/posts/${slug}`);
+                        goto(`/places/${slug}`);
                     });
                     marker.on("mouseover", () => {
-                        prefetch(`/posts/${slug}`);
+                        prefetch(`/places/${slug}`);
                     });
                 }
             });

@@ -15,7 +15,7 @@ export async function get () {
 					const fileRes = fs.readFileSync( `src/routes/places/content/${file}`, { encoding: "utf-8" });
 					const { body, attributes } = fm( fileRes );
 					const html = marked( body );
-					return { html, ...attributes };
+					return { html, ...attributes, slug: _.replace( file, /.md$/, "" ) };
 				})),
 			},
 		};
