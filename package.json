@@ -4,7 +4,7 @@
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
-		"postbuild": "npx purgecss --css build/css/*.css --content build/**/*.html build/**/*.js --output build/css && npx css-minify -f build/css/main.css -o build/css && mv build/css/main.min.css build/css/main.css",
+		"postbuild": "npx purgecss --css build/css/*.css --content build/**/*.html build/**/*.js --output build/css && npx css-minify -d build/css -o build/css && mv build/css/main.min.css build/css/main.css",
 		"start": "svelte-kit start"
 	},
 	"devDependencies": {
