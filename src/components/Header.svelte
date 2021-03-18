@@ -7,12 +7,7 @@
         pathname = window.location.pathname;
     });
 
-    const _toggleNav = () => {
-        document.body.classList.toggle("is-navPanel-visible");
-        document.getElementById("navPanel").classList.add("toggleable");
-    };
-
-    let navOpen = false;
+    let navOpenCounter = 0;
 </script>
 
 <header id="header" class="alt">
@@ -27,12 +22,34 @@
             </li>
         </ul>
     </nav>
-    <span class="nav-button feather-menu" on:click={_toggleNav} />
+    <span class="nav-button feather-menu" on:click={() => navOpenCounter++} />
+    <div id="navPanel" class={`${navOpenCounter > 0 ? "toggleable" : ""} ${navOpenCounter % 2 === 0 ? "" : "is-navPanel-visible"}`}>
+        <span class="close feather-x" on:click={() => navOpenCounter++} />
+        <nav>
+            <a class="link depth-0" href="/" on:click={() => navOpenCounter++}>Map</a>
+            <a class="link depth-0" href="/places" on:click={() => navOpenCounter++}>Places</a>
+        </nav>
+    </div>
+    <div class={`navPanel-overlay ${navOpenCounter % 2 === 0 ? "" : "is-navPanel-visible"}`} on:click={() => navOpenCounter++} />
 </header>
 
 <style>
     .nav-button {
         display: none;
+    }
+
+    .navPanel-overlay {
+        position: absolute;
+        display: none;
+        top: 0;
+        bottom: -100vh;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        background: rgba(0, 0, 0, 0.35);
+    }
+    .navPanel-overlay.is-navPanel-visible {
+        display: initial;
     }
 
     @media screen and (max-width: 480px) {

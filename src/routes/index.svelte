@@ -145,12 +145,12 @@
     }
 
     #banner {
-        background-color: #20c5e7;
+        background-color: var(--primary);
     }
 
     .map-container-wrapper {
         padding-bottom: 4rem;
-        background-color: #20c5e7;
+        background-color: var(--primary);
     }
 
     .map-container {
