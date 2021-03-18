@@ -43,7 +43,9 @@
                     <img src={place.image} alt="" />
                 </div>
             {/if}
-            {@html place.html}
+            <div class="blog-post-body">
+                {@html place.html}
+            </div>
         </div>
     </div>
 </div>
