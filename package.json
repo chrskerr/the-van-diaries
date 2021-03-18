@@ -4,20 +4,18 @@
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
+		"postbuild": "npx purgecss --css build/css/*.css --content build/**/*.html build/**/*.js --output build/css && npx css-minify -f build/css/main.css -o build/css && mv build/css/main.min.css build/css/main.css",
 		"start": "svelte-kit start"
 	},
 	"devDependencies": {
-		"@fullhuman/postcss-purgecss": "^4.0.2",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
-		"autoprefixer": "^10.2.5",
+		"css-minify": "^1.1.0",
 		"eslint": "^7.22.0",
-		"postcss": "^8.2.8",
-		"postcss-load-config": "^3.0.1",
+		"purgecss": "^4.0.2",
 		"sass": "^1.32.8",
 		"svelte": "^3.29.0",
-		"svelte-preprocess": "^4.6.9",
 		"vite": "^2.0.4",
 		"vite-plugin-markdown": "^2.0.2"
 	},
