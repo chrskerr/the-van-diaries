@@ -1,6 +1,5 @@
 ---
 title: Branxholm
-slug: tas-branxholm
 latLng: [-41.16547504357758, 147.72043867377798]
 date: 2021-03-05
 image: ../images/branxholm-tin-timbers-cafe.jpg
