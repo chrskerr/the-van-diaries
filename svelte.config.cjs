@@ -1,5 +1,4 @@
 /** @type {import('@sveltejs/kit').Config} */
-const sveltePreprocess = require( "svelte-preprocess" );
 
 module.exports = {
 	compilerOptions: { 
@@ -12,11 +11,4 @@ module.exports = {
 			lib: "node_modules",
 		},
 	},
-	preprocess: sveltePreprocess({
-		postcss: {
-			plugins: [
-				require( "autoprefixer" )(),
-			],
-		},
-	}),
 };
