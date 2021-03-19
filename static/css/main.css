@@ -3675,7 +3675,7 @@ input, select, textarea {
 		-ms-transform: translateX(100%);
 		transform: translateX(100%);
 		-webkit-overflow-scrolling: touch;
-		background-color: var(--navPanel);
+		background-color: var(--nav);
 		box-shadow: none;
 		color: var(--white);
 		height: 100%;
