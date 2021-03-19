@@ -5,3 +5,4 @@
 - Set up links on bottom of index to take you to prefiltered Places (and Writing for the Hacks)
 - Update contact us down the bottom
 - Make mobile Map first-click show tooltip, second click navigate
+- Mobile view, the "Who we are" section dividers should be centre aligned
