@@ -1,4 +1,5 @@
-/** @type {import('@sveltejs/kit').Config} */
+const { plugin } = require( "vite-plugin-markdown" );
+const { resolve } = require( "path" );
 
 module.exports = {
 	compilerOptions: { 
@@ -9,6 +10,16 @@ module.exports = {
 		target: "#svelte",
 		files: {
 			lib: "node_modules",
+		},
+		vite: {
+			resolve: {
+				alias: {
+					$components: resolve( "src/components" ),
+				},
+			},
+			plugins: [
+				plugin(),
+			],
 		},
 	},
 };
