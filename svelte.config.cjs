@@ -1,5 +1,6 @@
 const { plugin } = require( "vite-plugin-markdown" );
 const { resolve } = require( "path" );
+const sveltePreprocess = require( "svelte-preprocess" );
 
 module.exports = {
 	compilerOptions: { 
@@ -15,6 +16,7 @@ module.exports = {
 			resolve: {
 				alias: {
 					$components: resolve( "src/components" ),
+					$static: resolve( "static" ),
 				},
 			},
 			plugins: [
@@ -22,4 +24,7 @@ module.exports = {
 			],
 		},
 	},
+	preprocess: sveltePreprocess({
+		postcss: true,
+	}),
 };

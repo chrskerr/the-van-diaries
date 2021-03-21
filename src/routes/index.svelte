@@ -11,6 +11,7 @@
     import Header from "$components/Header.svelte";
     import Footer from "$components/Footer.svelte";
     import Map from "$components/Map.svelte";
+    import Style from "$components/Style.svelte";
 
     let width;
     import { onMount } from "svelte";
@@ -19,6 +20,7 @@
     });
 </script>
 
+<Style />
 <Header />
 
 <!-- Banner -->
