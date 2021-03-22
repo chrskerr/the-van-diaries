@@ -2,8 +2,9 @@
     import { afterUpdate } from "svelte";
     import { blur } from "svelte/transition";
     import _ from "lodash";
+    import { browser } from "$app/env";
 
-    let pathname;
+    let pathname = browser ? window.location.pathname : null;
     afterUpdate(() => {
         pathname = window.location.pathname;
     });
