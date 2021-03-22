@@ -241,6 +241,13 @@ input, select, textarea {
 			margin-right: 0;
 		}
 
+		@media screen and (max-width: 980px) {
+			header p.left:after {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
 	header h1.left:before, header h2.left:before, header h3.left:before, header h4.left:before, header h5.left:before, header h6.left:before {
 		margin-left: 0;
 		margin-right: 0;

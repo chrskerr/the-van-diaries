@@ -8,8 +8,6 @@
 <script>
     export let places = [];
 
-    import Header from "$components/Header.svelte";
-    import Footer from "$components/Footer.svelte";
     import Map from "$components/Map.svelte";
 
     let width;
@@ -19,9 +17,6 @@
     });
 </script>
 
-<Header />
-
-<!-- Banner -->
 <div id="banner">
     <div class="wrapper style1 special">
         <div class="inner">
@@ -36,7 +31,6 @@
     </div>
 </div>
 
-<!-- One -->
 <div id="one">
     <div class="wrapper special">
         <div class="inner">
@@ -53,7 +47,6 @@
     </div>
 </div>
 
-<!-- Two -->
 <div id="two">
     <div class="wrapper style2">
         <div class="inner">
@@ -81,7 +74,6 @@
     </div>
 </div>
 
-<!-- Three -->
 <div id="three">
     <div class="wrapper alt special">
         <header class="major pb-0">
@@ -100,7 +92,7 @@
                             <p>Finding the best spots to set up camp and relax, while not needing to dip into your pockets can be hard. Especially if you're after facilities such as running water, toilets & showers and simply a nice place to be. Lucky for you, we've now done the work and want to share everything we know!</p>
                             <ul class="actions">
                                 <li>
-                                    <a href="#" class="button small">More</a>
+                                    <a svelte:preload href="/places?free-camping" class="button small">More</a>
                                 </li>
                             </ul>
                         </div>
@@ -114,7 +106,7 @@
                             <p>Why is it so hard to find any useful information on MTB trails in Australia?! Sure, there's TrailForks for a basic map of trails, but how do you know if they're actually going to be any good when you get there? We're busy exploring the best of Australia's MTB trails and filling you in!</p>
                             <ul class="actions">
                                 <li>
-                                    <a href="#" class="button small">More</a>
+                                    <a svelte:preload href="/places?mountain-biking" class="button small">More</a>
                                 </li>
                             </ul>
                         </div>
@@ -128,7 +120,7 @@
                             <p>We feel like we are getting really good at living an unbelievably comfortable and relaxing life on the road, but it did nto happen overnight. Read our tips & tricks to ensure you are set up for the best van life experience over the long term.</p>
                             <ul class="actions">
                                 <li>
-                                    <a href="#" class="button small">More</a>
+                                    <a svlete:preload href="/writing" class="button small">More</a>
                                 </li>
                             </ul>
                         </div>
@@ -139,13 +131,7 @@
     </div>
 </div>
 
-<Footer />
-
 <style>
-    * {
-        animation: fadein 250ms;
-    }
-
     #banner {
         background-color: var(--primary);
     }

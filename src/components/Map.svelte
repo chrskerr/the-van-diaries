@@ -32,10 +32,17 @@
             const icon = L.divIcon({ html: "<span class='feather-location' />" });
             markers.forEach(({ title, latLng, slug }) => {
                 const marker = L.marker(latLng, { icon }).addTo(map).bindTooltip(title, { direction: "top" });
+                let clicks = 0;
 
                 if (!preventInteraction) {
                     marker.on("click", () => {
-                        goto(`/places/${slug}`);
+                        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && clicks === 0) {
+                            marker.toggleTooltip();
+                            prefetch(`/places/${slug}`);
+                            clicks++;
+                        } else {
+                            goto(`/places/${slug}`);
+                        }
                     });
                     marker.on("mouseover", () => {
                         prefetch(`/places/${slug}`);

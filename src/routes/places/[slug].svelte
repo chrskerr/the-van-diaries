@@ -18,13 +18,8 @@
 
 <script>
     export let place;
-
-    import Header from "$components/Header.svelte";
-    import Footer from "$components/Footer.svelte";
     import Map from "$components/Map.svelte";
 </script>
-
-<Header />
 
 <div id="main">
     <div class="wrapper">
@@ -50,13 +45,7 @@
     </div>
 </div>
 
-<Footer />
-
 <style>
-    * {
-        animation: fadein 250ms;
-    }
-
     .major > p {
         font-size: 1.5rem;
     }

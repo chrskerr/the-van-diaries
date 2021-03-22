@@ -1,5 +1,6 @@
 <script>
     import { afterUpdate } from "svelte";
+    import { blur } from "svelte/transition";
     import _ from "lodash";
 
     let pathname;
@@ -17,7 +18,7 @@
             <li class={pathname === "/" ? "current" : ""}>
                 <a href="/">Map</a>
             </li>
-            <li class={_.startsWith(pathname, "places") ? "current" : ""}>
+            <li class={_.startsWith(pathname, "/places") ? "current" : ""}>
                 <a href="/places">Places</a>
             </li>
         </ul>
@@ -32,6 +33,18 @@
     </div>
     <div class={`navPanel-overlay ${navOpenCounter % 2 === 0 ? "" : "is-navPanel-visible"}`} on:click={() => navOpenCounter++} />
 </header>
+
+{#key pathname}
+    <div in:blur>
+        <slot />
+    </div>
+{/key}
+
+<div id="footer">
+    <div class="wrapper style2">
+        <div class="copyright">&copy; Kate & Chris. All rights reserved and other similar stuff.</div>
+    </div>
+</div>
 
 <style>
     .nav-button {
