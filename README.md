@@ -3,6 +3,7 @@
 ## To Do's:
 - Add filters to main Map
 - Update contact us down the bottom
+- Mobile view on individual place, top image too small & other images still ridiculous
 
 
 ## To Tests:

@@ -14,6 +14,7 @@
     import _ from "lodash";
     import { onMount } from "svelte";
     import { goto } from "$app/navigation";
+    import { blur } from "svelte/transition";
 
     let filter = "all";
     const categories = _.uniq(_.flatMap(places, "categories")).sort();
@@ -69,18 +70,18 @@
 							${i === 0 ? "first" : ""}
 							`}
                     >
-                        <h3><a sveltekit:prefetch href={`/places/${place.slug}`}>{place.title}</a></h3>
-                        <h6>{format(parseISO(place.date), "do MMMM yyyy")}</h6>
-                        {#if place.categories}
-                            <h5>
+                        <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/places/${place.slug}`}>{place.title}</a></h3>
+                        <h6 in:blur={{ duration: 600 }}>{format(parseISO(place.date), "do MMMM yyyy")}</h6>
+                        {#if _.isArray(place.categories)}
+                            <h5 in:blur={{ duration: 600 }}>
                                 {_.join(
                                     _.map(place.categories, cat => _.startCase(cat)),
                                     ", ",
                                 )}
                             </h5>
                         {/if}
-                        <p>{place.summary}</p>
-                        <a sveltekit:prefetch href={`/places/${place.slug}`} class="button small">Read More</a>
+                        <p in:blur={{ duration: 600 }}>{place.summary}</p>
+                        <a in:blur={{ duration: 600 }} sveltekit:prefetch href={`/places/${place.slug}`} class="button small">Read More</a>
                     </div>
                 {/each}
             </div>
