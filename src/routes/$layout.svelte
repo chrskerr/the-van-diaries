@@ -74,4 +74,13 @@
             display: initial;
         }
     }
+
+    #footer > .wrapper {
+        padding-top: 2.5rem;
+    }
+
+    #footer > .wrapper > .copyright {
+        margin-top: 0;
+        padding: 2rem 2rem;
+    }
 </style>

@@ -16,6 +16,15 @@
 
 }
 
+.icon-spin {
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -4429,20 +4438,35 @@ input, select, textarea {
 }
 
 /* Blog Posts  */
+	.blog-post-body h1,
+	.blog-post-body h2,
+	.blog-post-body h3,
+	.blog-post-body h4,
+	.blog-post-body h5,
+	.blog-post-body h6 {
+		margin-bottom: 0.5rem;
+	}
 
-.blog-post-body h1,
-.blog-post-body h2,
-.blog-post-body h3,
-.blog-post-body h4,
-.blog-post-body h5,
-.blog-post-body h6 {
-	margin-bottom: 0.5rem;
-}
+	p, ul, ol {
+		margin-bottom: 1.5rem;
+	}
 
-p, ul, ol {
-	margin-bottom: 1.5rem;
-}
+	p + ul, p + ol {
+		margin-top: -0.5rem;
+	}
 
-p + ul, p + ol {
-	margin-top: -0.5rem;
-}
+	.blog-post-body img {
+		max-height: 20rem;
+		min-width: 80vh;
+		width: 80%;
+		object-fit: cover;
+		object-position: center center;
+		margin: 0 auto;
+		display: block;
+	}
+
+	@media screen and (max-width: 480px) {
+		.blog-post-body img {
+			width: 100%;
+		}
+	}

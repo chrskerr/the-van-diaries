@@ -57,11 +57,20 @@
     }
     .image {
         max-height: 20rem;
+        min-width: 20rem;
+        max-width: 45%;
     }
     .image > img {
         height: 100%;
         max-height: 20rem;
         object-fit: cover;
         object-position: center center;
+    }
+
+    @media screen and (max-width: 480px) {
+        .image {
+            min-width: 100%;
+            max-width: 100%;
+        }
     }
 </style>
