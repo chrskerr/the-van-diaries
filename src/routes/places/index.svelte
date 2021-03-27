@@ -70,7 +70,7 @@
 							${i === 0 ? "first" : ""}
 							`}
                     >
-                        <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/places/${place.slug}`}>{place.title}</a></h3>
+                        <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/places/${place.slug}`}>{place.title}, {place.state}</a></h3>
                         <h6 in:blur={{ duration: 600 }}>{format(parseISO(place.date), "do MMMM yyyy")}</h6>
                         {#if _.isArray(place.categories)}
                             <h5 in:blur={{ duration: 600 }}>
@@ -81,6 +81,7 @@
                             </h5>
                         {/if}
                         <p in:blur={{ duration: 600 }}>{place.summary}</p>
+                        <h6 in:blur={{ duration: 600 }}>by {_.startCase(place.author)}</h6>
                         <a in:blur={{ duration: 600 }} sveltekit:prefetch href={`/places/${place.slug}`} class="button small">Read More</a>
                     </div>
                 {/each}
@@ -116,6 +117,12 @@
     .places-container > .place > h5,
     .places-container > .place > p {
         margin-bottom: 1rem;
+    }
+    .places-container > .place > p {
+        line-height: 1.6rem;
+    }
+    .places-container > .place > a {
+        margin-top: 1rem;
     }
 
     @media screen and (min-width: 980px) {

@@ -19,13 +19,15 @@
 <script>
     export let place;
     import Map from "$components/Map.svelte";
+    import _ from "lodash";
 </script>
 
 <div id="main">
     <div class="wrapper">
         <div class="inner">
             <header class="major">
-                <h1>{place.title}</h1>
+                <h1 class="title">{place.title}, {place.state}</h1>
+                <p class="author">by {_.startCase(place.author)}</p>
                 {#if place.latLng}
                     <div class="post-header-map">
                         <Map centre={place.latLng} zoom={12} size="small" markers={[place]} preventInteraction={true} />
@@ -65,6 +67,14 @@
         max-height: 20rem;
         object-fit: cover;
         object-position: center center;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    .author::after {
+        content: unset;
     }
 
     @media screen and (max-width: 480px) {

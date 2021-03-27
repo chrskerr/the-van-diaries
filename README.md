@@ -2,6 +2,7 @@
 
 ## To Do's:
 - Add filters to main Map
+- Add image and coordinates to Castlemaine
 
 
 ## To Tests:
