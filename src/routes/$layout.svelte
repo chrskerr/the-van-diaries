@@ -1,8 +1,10 @@
 <script>
     import { afterUpdate } from "svelte";
+    import { blur } from "svelte/transition";
     import _ from "lodash";
+    import { browser } from "$app/env";
 
-    let pathname;
+    let pathname = browser ? window.location.pathname : null;
     afterUpdate(() => {
         pathname = window.location.pathname;
     });
@@ -17,7 +19,7 @@
             <li class={pathname === "/" ? "current" : ""}>
                 <a href="/">Map</a>
             </li>
-            <li class={_.startsWith(pathname, "places") ? "current" : ""}>
+            <li class={_.startsWith(pathname, "/places") ? "current" : ""}>
                 <a href="/places">Places</a>
             </li>
         </ul>
@@ -32,6 +34,18 @@
     </div>
     <div class={`navPanel-overlay ${navOpenCounter % 2 === 0 ? "" : "is-navPanel-visible"}`} on:click={() => navOpenCounter++} />
 </header>
+
+{#key pathname}
+    <div in:blur>
+        <slot />
+    </div>
+{/key}
+
+<div id="footer">
+    <div class="wrapper style2">
+        <div class="copyright">&copy; Kate & Chris. All rights reserved and other similar stuff.</div>
+    </div>
+</div>
 
 <style>
     .nav-button {
@@ -59,5 +73,14 @@
         .nav-button {
             display: initial;
         }
+    }
+
+    #footer > .wrapper {
+        padding-top: 2.5rem;
+    }
+
+    #footer > .wrapper > .copyright {
+        margin-top: 0;
+        padding: 2rem 2rem;
     }
 </style>

@@ -8,11 +8,13 @@
     import { goto, prefetch } from "$app/navigation";
     import { browser } from "$app/env";
     import { onMount } from "svelte";
+    import _ from "lodash";
 
     onMount(async () => {
         if (browser) {
             const L = await import("leaflet");
             const GeoSearch = await import("leaflet-geosearch");
+            await import("leaflet.locatecontrol");
 
             const map = L.map("map").setView(centre, zoom);
             L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
@@ -21,24 +23,48 @@
             }).addTo(map);
             setTimeout(() => map.invalidateSize(), 50);
 
-            if (!preventInteraction)
+            if (!preventInteraction) {
                 map.addControl(
                     new GeoSearch.GeoSearchControl({
                         provider: new GeoSearch.OpenStreetMapProvider(),
                         style: "bar",
                     }),
                 );
+                L.control.locate({ flyTo: true, icon: "feather-crosshair", iconLoading: "feather-loader icon-spin" }).addTo(map);
+            }
 
             const icon = L.divIcon({ html: "<span class='feather-location' />" });
-            markers.forEach(({ title, latLng, slug }) => {
-                const marker = L.marker(latLng, { icon }).addTo(map).bindTooltip(title, { direction: "top" });
+            markers.forEach(({ title, latLng, slug, categories }) => {
+                const popup = L.marker(latLng, { icon })
+                    .addTo(map)
+                    .bindPopup(
+                        L.popup({ closeButton: false }).setContent(
+                            `<h5>${title}</h5><ul>${_.join(
+                                _.map(categories, cat => `<li>${_.startCase(cat)}</li>`),
+                                "",
+                            )}</ul>`,
+                        ),
+                    );
+
+                let clicks = 0;
 
                 if (!preventInteraction) {
-                    marker.on("click", () => {
-                        goto(`/places/${slug}`);
+                    popup.on("click", () => {
+                        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && clicks === 0) {
+                            popup.openPopup();
+                            prefetch(`/places/${slug}`);
+                            clicks++;
+                        } else {
+                            goto(`/places/${slug}`);
+                        }
                     });
-                    marker.on("mouseover", () => {
+                    popup.on("mouseover", () => {
+                        popup.openPopup();
+                        clicks++;
                         prefetch(`/places/${slug}`);
+                    });
+                    popup.on("mouseout", () => {
+                        popup.closePopup();
                     });
                 }
             });
@@ -51,6 +77,7 @@
 <style>
     @import "$lib/leaflet/dist/leaflet.css";
     @import "$lib/leaflet-geosearch/dist/geosearch.css";
+    @import "$lib/leaflet.locatecontrol/dist/L.Control.Locate.min.css";
 
     #map {
         width: 100%;

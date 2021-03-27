@@ -18,13 +18,8 @@
 
 <script>
     export let place;
-
-    import Header from "$components/Header.svelte";
-    import Footer from "$components/Footer.svelte";
     import Map from "$components/Map.svelte";
 </script>
-
-<Header />
 
 <div id="main">
     <div class="wrapper">
@@ -50,13 +45,7 @@
     </div>
 </div>
 
-<Footer />
-
 <style>
-    * {
-        animation: fadein 250ms;
-    }
-
     .major > p {
         font-size: 1.5rem;
     }
@@ -68,11 +57,20 @@
     }
     .image {
         max-height: 20rem;
+        min-width: 20rem;
+        max-width: 45%;
     }
     .image > img {
         height: 100%;
         max-height: 20rem;
         object-fit: cover;
         object-position: center center;
+    }
+
+    @media screen and (max-width: 480px) {
+        .image {
+            min-width: 100%;
+            max-width: 100%;
+        }
     }
 </style>

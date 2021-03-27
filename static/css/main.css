@@ -2,15 +2,6 @@
 @import "./icomoon/style.css";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
 
-@keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
 :root {
 	--white: #ffffff;
 	--offwhite: #fafafa;
@@ -23,6 +14,15 @@
 	--hover: #4ed1ec;
 	--grey: #bbbbbb;
 
+}
+
+.icon-spin {
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
 }
 
 html, body, div, span, applet, object,
@@ -239,6 +239,13 @@ input, select, textarea {
 		header p.left:after {
 			margin-left: 0;
 			margin-right: 0;
+		}
+
+		@media screen and (max-width: 980px) {
+			header p.left:after {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 	header h1.left:before, header h2.left:before, header h3.left:before, header h4.left:before, header h5.left:before, header h6.left:before {
@@ -4431,20 +4438,35 @@ input, select, textarea {
 }
 
 /* Blog Posts  */
+	.blog-post-body h1,
+	.blog-post-body h2,
+	.blog-post-body h3,
+	.blog-post-body h4,
+	.blog-post-body h5,
+	.blog-post-body h6 {
+		margin-bottom: 0.5rem;
+	}
 
-.blog-post-body h1,
-.blog-post-body h2,
-.blog-post-body h3,
-.blog-post-body h4,
-.blog-post-body h5,
-.blog-post-body h6 {
-	margin-bottom: 0.5rem;
-}
+	p, ul, ol {
+		margin-bottom: 1.5rem;
+	}
 
-p, ul, ol {
-	margin-bottom: 1.5rem;
-}
+	p + ul, p + ol {
+		margin-top: -0.5rem;
+	}
 
-p + ul, p + ol {
-	margin-top: -0.5rem;
-}
+	.blog-post-body img {
+		max-height: 20rem;
+		min-width: 80vh;
+		width: 80%;
+		object-fit: cover;
+		object-position: center center;
+		margin: 0 auto;
+		display: block;
+	}
+
+	@media screen and (max-width: 480px) {
+		.blog-post-body img {
+			width: 100%;
+		}
+	}

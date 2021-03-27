@@ -30,6 +30,7 @@
 		"leaflet": "^1.7.1",
 		"leaflet-geosearch": "^3.2.2",
 		"leaflet-providers": "^1.11.0",
+		"leaflet.locatecontrol": "^0.73.0",
 		"lodash": "^4.17.21",
 		"marked": "^2.0.1",
 		"postcss": "^8.2.8",

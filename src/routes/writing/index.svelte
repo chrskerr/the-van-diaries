@@ -9,14 +9,10 @@
     export let places = [];
 
     import { format, parseISO } from "date-fns";
-    import Header from "$components/Header.svelte";
-    import Footer from "$components/Footer.svelte";
     import _ from "lodash";
 
     const sortedPlaces = _.orderBy(places, ["date"], ["desc"]);
 </script>
-
-<Header />
 
 <div id="main">
     <div class="wrapper">
@@ -47,13 +43,7 @@
     </div>
 </div>
 
-<Footer />
-
 <style>
-    * {
-        animation: fadein 250ms;
-    }
-
     .places-container {
         display: flex;
         flex-direction: row;

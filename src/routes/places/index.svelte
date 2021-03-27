@@ -9,14 +9,25 @@
     export let places = [];
 
     import { format, parseISO } from "date-fns";
-    import Header from "$components/Header.svelte";
-    import Footer from "$components/Footer.svelte";
+    import { flip } from "svelte/animate";
+    import { backOut } from "svelte/easing";
     import _ from "lodash";
+    import { onMount } from "svelte";
+    import { goto } from "$app/navigation";
+    import { blur } from "svelte/transition";
+
+    let filter = "all";
+    const categories = _.uniq(_.flatMap(places, "categories")).sort();
 
     const sortedPlaces = _.orderBy(places, ["date"], ["desc"]);
-</script>
+    $: filteredPlaces = _.filter(sortedPlaces, ({ categories }) => filter === "all" || _.includes(categories, filter));
 
-<Header />
+    onMount(() => {
+        const query = _.last(_.split(window.location, "?"));
+        if (query && _.includes(categories, query)) filter = query;
+        else filter = "all";
+    });
+</script>
 
 <div id="main">
     <div class="wrapper">
@@ -25,21 +36,52 @@
                 <h1>Places</h1>
                 <p>The places we've been, especially those we've loved</p>
             </header>
-            <div class="places-container">
-                {#each sortedPlaces as place, i}
-                    <div class={`place ${i % 2 === 0 ? "left" : ""} ${(places.length % 2 === 0 ? i === places.length - 1 || i === places.length - 2 : i === places.length - 1) ? "last-row" : ""}`}>
-                        <h3><a sveltekit:prefetch href={`/places/${place.slug}`}>{place.title}</a></h3>
-                        <h6>{format(parseISO(place.date), "do MMMM yyyy")}</h6>
-                        {#if place.categories}
-                            <h5>
+            <div class="filters">
+                <span
+                    class={`clickable ${filter === "all" ? "selected" : ""}`}
+                    on:click={() => {
+                        filter = "all";
+                        goto("/places", { noscroll: true });
+                    }}>All</span
+                >
+                {#each categories as category}
+                    <span>-</span>
+                    <span
+                        class={`clickable ${filter === category ? "selected" : ""}`}
+                        on:click={() => {
+                            filter = category;
+                            goto(`/places?${category}`, { noscroll: true });
+                        }}>{_.startCase(category)}</span
+                    >
+                {/each}
+            </div>
+            <div class={`places-container ${_.size(filteredPlaces) === 2 ? "only-two" : ""}`}>
+                {#each filteredPlaces as place, i (place.slug)}
+                    <div
+                        animate:flip={{ duration: 800, easing: backOut }}
+                        class={`
+							place 
+							${_.size(filteredPlaces) === 1 ? "only-one" : ""}
+							${_.size(filteredPlaces) === 2 && i === 1 ? "only-two" : ""}
+							${(i + 1) % 3 === 0 ? "iplus1mod3" : ""} 
+							${(i + 1) % 2 === 0 ? "iplus1mod2" : ""} 
+							${i === 0 || i === 1 || i === 2 ? "first-three" : ""}
+							${i === 0 || i === 1 ? "first-two" : ""}
+							${i === 0 ? "first" : ""}
+							`}
+                    >
+                        <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/places/${place.slug}`}>{place.title}</a></h3>
+                        <h6 in:blur={{ duration: 600 }}>{format(parseISO(place.date), "do MMMM yyyy")}</h6>
+                        {#if _.isArray(place.categories)}
+                            <h5 in:blur={{ duration: 600 }}>
                                 {_.join(
                                     _.map(place.categories, cat => _.startCase(cat)),
                                     ", ",
                                 )}
                             </h5>
                         {/if}
-                        <p>{place.summary}</p>
-                        <a sveltekit:prefetch href={`/places/${place.slug}`} class="button small">Read More</a>
+                        <p in:blur={{ duration: 600 }}>{place.summary}</p>
+                        <a in:blur={{ duration: 600 }} sveltekit:prefetch href={`/places/${place.slug}`} class="button small">Read More</a>
                     </div>
                 {/each}
             </div>
@@ -47,30 +89,24 @@
     </div>
 </div>
 
-<Footer />
-
 <style>
-    * {
-        animation: fadein 250ms;
-    }
-
     .places-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .places-container.only-two {
+        justify-content: center;
     }
 
     .places-container > .place {
-        width: 50%;
+        width: calc(100% / 3);
         padding: 2.5rem;
-        border-bottom: dotted lightgrey 1px;
-    }
-
-    .places-container > .place.last-row {
-        border-bottom: none;
-    }
-    .places-container > .place.left {
-        border-right: dotted lightgrey 1px;
+        border-top: dotted 1px rgba(187, 187, 187, 0.3);
+        border-right: dotted 1px rgba(187, 187, 187, 0.3);
+        will-change: border-color;
+        transition: border-color 1s;
     }
 
     .places-container > .place > h3,
@@ -82,15 +118,59 @@
         margin-bottom: 1rem;
     }
 
-    @media screen and (max-width: 980px) {
+    @media screen and (min-width: 980px) {
+        .places-container > .place.first-three {
+            border-top-color: rgba(187, 187, 187, 0);
+        }
+        .places-container > .place.iplus1mod3 {
+            border-right-color: rgba(187, 187, 187, 0);
+        }
+        .places-container > .place.only-one {
+            border-color: rgba(187, 187, 187, 0);
+        }
+        .places-container > .place.only-two {
+            border-right-color: rgba(187, 187, 187, 0);
+        }
+    }
+
+    @media screen and (max-width: 980px) and (min-width: 736px) {
+        .places-container > .place {
+            width: 50%;
+        }
+        .places-container > .place.first-two {
+            border-top-color: rgba(187, 187, 187, 0);
+        }
+        .places-container > .place.iplus1mod2 {
+            border-right-color: rgba(187, 187, 187, 0);
+        }
+    }
+    @media screen and (max-width: 736px) {
         .places-container > .place {
             width: 100%;
             padding: 2.5rem;
-            border-right: none !important;
-            border-bottom: dotted lightgrey 1px;
+            border-right-color: rgba(187, 187, 187, 0);
         }
-        .places-container > .place:last-child {
-            border-bottom: none;
+        .places-container > .place.first {
+            border-top-color: rgba(187, 187, 187, 0);
         }
+    }
+
+    .filters {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        margin-top: -2rem;
+    }
+    .filters > span {
+        margin: 0;
+        padding: 0 0.5rem;
+        color: var(--primary);
+    }
+    .filters > span.clickable {
+        cursor: pointer;
+    }
+    .filters > span.selected {
+        font-weight: 600;
     }
 </style>
