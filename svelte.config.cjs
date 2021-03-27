@@ -1,6 +1,7 @@
-const { plugin } = require( "vite-plugin-markdown" );
+const { plugin: viteMarkdown } = require( "vite-plugin-markdown" );
 const { resolve } = require( "path" );
 const sveltePreprocess = require( "svelte-preprocess" );
+const css = require( "rollup-plugin-css-only" );
 
 module.exports = {
 	compilerOptions: { 
@@ -20,7 +21,8 @@ module.exports = {
 				},
 			},
 			plugins: [
-				plugin(),
+				viteMarkdown(),
+				css({ output: "css/main.css" }),
 			],
 		},
 	},

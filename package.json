@@ -36,6 +36,7 @@
 		"postcss": "^8.2.8",
 		"postcss-load-config": "^3.0.1",
 		"postcss-preset-env": "^6.7.0",
+		"rollup-plugin-css-only": "^3.1.0",
 		"svelte-preprocess": "^4.6.9"
 	},
 	"license": "MIT",

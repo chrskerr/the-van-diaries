@@ -9,7 +9,6 @@
     export let places = [];
 
     import Map from "$components/Map.svelte";
-    import Style from "$components/Style.svelte";
 
     let width;
     import { onMount } from "svelte";

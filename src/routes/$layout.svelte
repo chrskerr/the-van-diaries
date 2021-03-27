@@ -48,6 +48,8 @@
 </div>
 
 <style>
+    @import "$components/css/main.css";
+
     .nav-button {
         display: none;
     }
