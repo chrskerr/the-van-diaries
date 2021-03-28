@@ -1,7 +1,7 @@
 ---
 title: Castlemaine
 state: Victoria
-latLng: [0, 0]
+latLng: [-37.05110947640853, 144.21764571377082]
 date: 2021-03-20
 image: ""
 summary: Beautiful botanical gardeners, amazing local food, plus some nearby riding
