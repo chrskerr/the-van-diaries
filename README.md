@@ -2,7 +2,8 @@
 
 ## To Do's:
 - Add filters to main Map
-- Add image and coordinates to Castlemaine
+- Add images to Castlemaine
+- Add RSS feed?
 
 
 ## To Tests:
