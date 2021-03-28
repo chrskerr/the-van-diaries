@@ -3,7 +3,7 @@ title: Castlemaine
 state: Victoria
 latLng: [-37.05110947640853, 144.21764571377082]
 date: 2021-03-20
-image: ""
+image: "../images/places/vic/castlemaine/IMG_7429.jpeg"
 summary: Beautiful botanical gardeners, amazing local food, plus some nearby riding
 categories: ["stealth-camping", "mountain-biking", "foodie"]
 author: chris
@@ -21,4 +21,7 @@ We went in expecting to spend the day exploring a cafe or two at my parents reco
 - Showers are at the gym/pool in town, was $2 each for a very clean and well maintained bathroom.
 - There are two IGAs and plenty of smaller shops for supplies.
 
+
 If you're nearby or looking for a beautiful place to stop and slow down for a little while, this city could be just the spot!
+
+![Chris fixing his hair](../images/places/vic/castlemaine/IMG_7417.jpeg)
