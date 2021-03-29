@@ -20,28 +20,30 @@
     export let place;
     import Map from "$components/Map.svelte";
     import _ from "lodash";
+
+    const { author, title, state, latLng, summary, image, html } = place;
 </script>
 
 <div id="main">
     <div class="wrapper">
         <div class="inner">
             <header class="major">
-                <h1 class="title">{place.title}, {place.state}</h1>
-                <p class="author">by {_.startCase(place.author)}</p>
-                {#if place.latLng}
+                <h1 class="title">{title}, {state}</h1>
+                {#if author}<p class="author">by {_.startCase(author)}</p>{/if}
+                {#if latLng}
                     <div class="post-header-map">
-                        <Map centre={place.latLng} zoom={12} size="small" markers={[place]} preventInteraction={true} />
+                        <Map centre={latLng} zoom={12} size="small" markers={[place]} preventInteraction={true} />
                     </div>
                 {/if}
-                <p>{place.summary}</p>
+                <p>{summary}</p>
             </header>
-            {#if place.image}
+            {#if image}
                 <div class="image right">
-                    <img src={place.image} alt="" />
+                    <img src={image} alt={title} />
                 </div>
             {/if}
             <div class="blog-post-body">
-                {@html place.html}
+                {@html html}
             </div>
         </div>
     </div>

@@ -30,7 +30,7 @@
                         style: "bar",
                     }),
                 );
-                L.control.locate({ flyTo: true, icon: "feather-crosshair", iconLoading: "feather-loader icon-spin" }).addTo(map);
+                L.control.locate({ flyTo: false, icon: "feather-location", iconLoading: "feather-loader icon-spin" }).addTo(map);
             }
 
             const icon = L.divIcon({ html: "<span class='feather-location' />" });
