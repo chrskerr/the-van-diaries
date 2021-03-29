@@ -10,7 +10,7 @@ export async function get () {
 	if ( files && _.size( files ) > 0 ) {
 		return {
 			body: {
-				places: _.compact( _.map( files, file => {
+				writing: _.compact( _.map( files, file => {
 					if ( !_.endsWith( file, ".md" )) return false;
 					const fileRes = fs.readFileSync( `src/routes/writing/content/${file}`, { encoding: "utf-8" });
 					const { body, attributes } = fm( fileRes );

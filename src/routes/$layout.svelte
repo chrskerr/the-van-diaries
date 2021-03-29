@@ -22,6 +22,9 @@
             <li class={_.startsWith(pathname, "/places") ? "current" : ""}>
                 <a href="/places">Places</a>
             </li>
+            <li class={_.startsWith(pathname, "/writing") ? "current" : ""}>
+                <a href="/writing">Writing</a>
+            </li>
         </ul>
     </nav>
     <span class="nav-button feather-menu" on:click={() => navOpenCounter++} />
@@ -30,6 +33,7 @@
         <nav>
             <a class="link depth-0" href="/" on:click={() => navOpenCounter++}>Map</a>
             <a class="link depth-0" href="/places" on:click={() => navOpenCounter++}>Places</a>
+            <a class="link depth-0" href="/writing" on:click={() => navOpenCounter++}>Writing</a>
         </nav>
     </div>
     <div class={`navPanel-overlay ${navOpenCounter % 2 === 0 ? "" : "is-navPanel-visible"}`} on:click={() => navOpenCounter++} />

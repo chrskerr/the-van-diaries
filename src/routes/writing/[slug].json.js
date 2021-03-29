@@ -12,7 +12,7 @@ export async function get ( request ) {
 		const html = marked( body );
 		return {
 			body: {
-				place: { html, ...attributes },
+				piece: { html, ...attributes },
 			},
 		};
 	}
