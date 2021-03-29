@@ -6,7 +6,7 @@ date: 2021-03-20
 image: "../images/places/vic/castlemaine/IMG_7429.jpeg"
 summary: Beautiful botanical gardeners, amazing local food, plus some nearby riding
 categories: ["stealth-camping", "mountain-biking", "foodie"]
-author: chris
+published: true
 ---
 
 Castlemaine was a true highlight of country Victoria. It had everything that Kate and I wanted: beautiful outdoor spaces, easy stealth camping near bathrooms & water, excellent baked goods, local ice cream, nearby mountain bike parks, and cheap access to a shower at the local pool/gym!

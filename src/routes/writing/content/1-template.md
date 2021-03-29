@@ -1,12 +1,11 @@
 ---
-title: Main Heading of the Page
-latLng: [copy from google maps, keep the square brackets]
+title: Template
 date: yyyy-mm-dd
-image: ../images/file.jpg - add an image to the static/images folder, then put its name here
-summary: A short description of the thing which will show at the top of the blog post and in the blogs page
+image: https://source.unsplash.com/ykOo1get5dk/1200x800
+summary: Short summary
 categories: ["paid-camping", "free-camping", "stealth-camping", "mountain-biking", "foodie", "other"]
+published: false
 ---
-
 # Markdown Guide
 
 Markdown is the language used to write blog posts (all the text on the page). You can see more information here: https://www.markdownguide.org/basic-syntax/
@@ -46,4 +45,3 @@ is much further apart
 - Non-numbered
 - List
 - Items
-

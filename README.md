@@ -8,3 +8,7 @@
 
 ## To Tests:
 - Make mobile Map first-click show tooltip, second click navigate (maybe works, needs testing)
+
+
+## Work in Progress
+- Blog posts which need to be finished and published

@@ -20,7 +20,7 @@
     export let piece;
     import _ from "lodash";
 
-    const { author, title, summary, image, html } = piece;
+    const { title, summary, image, html } = piece;
 </script>
 
 <div id="main">
@@ -28,7 +28,6 @@
         <div class="inner">
             <header class="major">
                 <h1 class="title">{title}</h1>
-                {#if author}<p class="author">by {_.startCase(author)}</p>{/if}
                 <p>{summary}</p>
             </header>
             {#if image}

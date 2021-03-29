@@ -42,7 +42,6 @@
                         <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/writing/${slug}`}>{title}</a></h3>
                         <h6 in:blur={{ duration: 600 }}>{format(parseISO(date), "do MMMM yyyy")}</h6>
                         <p in:blur={{ duration: 600 }}>{summary}</p>
-                        <h6 in:blur={{ duration: 600 }}>by {_.startCase(author)}</h6>
                         <a in:blur={{ duration: 600 }} sveltekit:prefetch href={`/writing/${slug}`} class="button small">Read More</a>
                     </div>
                 {/each}
