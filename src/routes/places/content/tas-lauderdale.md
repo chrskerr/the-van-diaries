@@ -6,7 +6,7 @@ date: 2021-02-20
 image: ../images/chris-lauderdale.jpg
 summary: Stealth camping at the beach, 15 mins drive to Hobart centre
 categories: ["stealth-camping", "foodie"]
-author: kate
+published: true
 ---
 
 We discovered this absolute gem off the recommendation of fellow van-life travellers, and ended up staying for here for nearly a week.

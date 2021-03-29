@@ -81,7 +81,6 @@
                             </h5>
                         {/if}
                         <p in:blur={{ duration: 600 }}>{place.summary}</p>
-                        <h6 in:blur={{ duration: 600 }}>by {_.startCase(place.author)}</h6>
                         <a in:blur={{ duration: 600 }} sveltekit:prefetch href={`/places/${place.slug}`} class="button small">Read More</a>
                     </div>
                 {/each}

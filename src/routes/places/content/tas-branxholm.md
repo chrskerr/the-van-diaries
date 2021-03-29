@@ -6,7 +6,7 @@ date: 2021-03-05
 image: ../images/branxholm-tin-timbers-cafe.jpg
 summary: Free-campers heaven, super close to world class MTB trails
 categories: ["free-camping", "mountain-biking", "foodie"]
-author: kate
+published: true
 ---
 
 What a spot!!! Branxholm can best be described as Derby’s lesser known, quieter cousin. Only an 8 minute drive from the MTB trails, cafes and pubs at Derby, Branxholm is definitely the place to stop if you are after better facilities, a quieter rest area, cheap groceries (relevant to Tassie towns) and the only cafe you’ll need. Most likely you’ll stop in at this little town for one of four things:

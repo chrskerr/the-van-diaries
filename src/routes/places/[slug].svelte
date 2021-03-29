@@ -21,7 +21,7 @@
     import Map from "$components/Map.svelte";
     import _ from "lodash";
 
-    const { author, title, state, latLng, summary, image, html } = place;
+    const { title, state, latLng, summary, image, html } = place;
 </script>
 
 <div id="main">
@@ -29,7 +29,6 @@
         <div class="inner">
             <header class="major">
                 <h1 class="title">{title}, {state}</h1>
-                {#if author}<p class="author">by {_.startCase(author)}</p>{/if}
                 {#if latLng}
                     <div class="post-header-map">
                         <Map centre={latLng} zoom={12} size="small" markers={[place]} preventInteraction={true} />

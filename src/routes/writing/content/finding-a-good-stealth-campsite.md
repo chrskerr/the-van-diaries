@@ -4,7 +4,7 @@ date: 2021-03-29
 image: https://source.unsplash.com/ykOo1get5dk/1200x800
 summary: How we find good places to crash
 categories: ["stealth-camping"]
-author: chris
+published: true
 ---
 
 It's starting to get darker or cold, perhaps its just dinner time and you know that you can't sleep wherever you are. Regardless, its exhausting constantly working out where you can get away with stealth camping in your van each and every night!
