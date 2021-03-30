@@ -5,7 +5,7 @@ latLng: []
 date: yyyy-mm-dd
 image: ../images/image.jpg
 summary: Short Summary
-categories: ["paid-camping", "free-camping", "stealth-camping", "mountain-biking", "foodie", "other"]
+categories: ["paid-camping", "free-camping", "stealth-camping", "mountain-biking", "foodie", "trail-running", "other"]
 published: false
 ---
 
