@@ -11,7 +11,7 @@ published: true
 
 An idyllic mountain town, seemingly focussed on snow sports, cycle sports, climbing the mountains, and just being outside.
 
-We originally came on the recommendation that the Big Mountain mtb park had awesome undercover facilities that we could work from over a few wet days (the facilities were great! Well covered, easy electricity, bbqs, cold showers, clean water, etc) but little did we know how long we'd stay!
+We originally came on the recommendation that the Big Hill mtb park had awesome undercover facilities that we could work from over a few wet days (the facilities were great! Well covered, easy electricity, bbqs, cold showers, clean water, etc) but little did we know how long we'd stay!
 
 Day two we attempted to run to the top of Mount Bogong just nearby. It was one of the toughest climbs we've done in terms of sustained steepness but paid of with beautiful views from (near) the top. Since we were running it and travelling light, we were unprepared for a strong change of wind near the summit which caused us to retreat into the trees for warmth.
 

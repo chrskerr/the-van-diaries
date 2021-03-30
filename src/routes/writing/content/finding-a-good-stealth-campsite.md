@@ -21,13 +21,13 @@ Between us we use the (Australian) iPhone apps: Campermate & WikiCamps. These ca
 
 
 ### Step 2 - suss out the reviews and photos of the most promising
-Nearby parks or playgrounds sometimes allow overnight parking in their carpark, but you can often sleep in street parking nearby. We try to move during the day if we do this to limit giving the impression of "moving into the neighbourhood", though for 2-3 nights this hasn't been a problem yet.
+Nearby parks or playgrounds sometimes do not allow overnight parking in their carpark, but you can often sleep in street parking nearby. We try to move during the day if we do this to limit giving the impression of "moving into the neighbourhood", though for 2-3 nights this hasn't been a problem yet.
 
 ### Step 3 - look at major streets, thoroughfares or train lines nearby
 These can get very noising, and sometimes don't stop even late at night.
 
-### Step 4 - be prepared to drive to a few of the shortlist 
-You'll get a very rapid feel for the area standing in it. How exposed is it, whats the community "feel" like, how are the facilities laid out, etc. We've moved on many times after finding someplace mediocre and then found something great.
+### Step 4 - be prepared to drive to a few on the shortlist 
+You'll get a very rapid feel for the area standing in it. How exposed is it, what does the community "feel" like, how are the facilities laid out, etc. We've moved on many times after finding someplace mediocre and then found something great.
 
 Worst case scenario you can just go back!
 
