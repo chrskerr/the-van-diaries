@@ -7,6 +7,7 @@ image: ../images/places/tas/swinging-gate/IMG_7237.jpeg
 summary: An eclectic and welcoming vineyard a shot trip from Launceston
 categories: ["foodie"]
 published: true
+rating: 2
 ---
 
 [Swinging Gate Vineyard](https://swinginggatewines.com.au) truly stood out for us because of their unusual approach to their product. Everything they made was slightly unusual and stood out from the normal cellar door market.
