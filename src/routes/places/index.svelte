@@ -72,6 +72,11 @@
                     >
                         <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/places/${place.slug}`}>{place.title}, {place.state}</a></h3>
                         <h6 in:blur={{ duration: 600 }}>{format(parseISO(place.date), "do MMMM yyyy")}</h6>
+                        <div class="ratings">
+                            <span class={`feather-star ${place.rating >= 1 ? "checked" : ""}`} />
+                            <span class={`feather-star ${place.rating >= 2 ? "checked" : ""}`} />
+                            <span class={`feather-star ${place.rating >= 3 ? "checked" : ""}`} />
+                        </div>
                         {#if _.isArray(place.categories)}
                             <h5 in:blur={{ duration: 600 }}>
                                 {_.join(
@@ -109,9 +114,11 @@
         transition: border-color 1s;
     }
 
-    .places-container > .place > h3,
-    .places-container > .place > h6 {
+    .places-container > .place > h3 {
         margin-bottom: 0.75rem;
+    }
+    .places-container > .place > h6 {
+        margin-bottom: 0.25rem;
     }
     .places-container > .place > h5,
     .places-container > .place > p {

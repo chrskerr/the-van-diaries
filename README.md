@@ -2,7 +2,6 @@
 
 ## To Do's:
 - Add filters to main Map
-- Add images to Castlemaine
 - Add RSS feed?
 
 
@@ -11,4 +10,4 @@
 
 
 ## Work in Progress
-- Blog posts which need to be finished and published
+- St Helens - needs photos and confirmation of the dates we were there

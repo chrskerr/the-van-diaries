@@ -21,7 +21,11 @@
     import Map from "$components/Map.svelte";
     import _ from "lodash";
 
-    const { title, state, latLng, summary, image, html } = place;
+    import ratingsMap from "../../ratings";
+
+    const { title, state, latLng, summary, image, html, rating } = place;
+
+    $: ratingText = _.get(ratingsMap, rating);
 </script>
 
 <div id="main">
@@ -29,6 +33,12 @@
         <div class="inner">
             <header class="major">
                 <h1 class="title">{title}, {state}</h1>
+                <div class="ratings">
+                    <span class={`feather-star ${place.rating >= 1 ? "checked" : ""}`} />
+                    <span class={`feather-star ${place.rating >= 2 ? "checked" : ""}`} />
+                    <span class={`feather-star ${place.rating >= 3 ? "checked" : ""}`} />
+                </div>
+                <p class="rating-text">{ratingText}</p>
                 {#if latLng}
                     <div class="post-header-map">
                         <Map centre={latLng} zoom={12} size="small" markers={[place]} preventInteraction={true} />
@@ -83,5 +93,19 @@
             min-width: 100%;
             max-width: 100%;
         }
+    }
+
+    .ratings {
+        margin-top: 1.5rem;
+    }
+    .rating-text {
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+    .rating-text::after {
+        content: unset;
+    }
+    .feather-star {
+        font-size: 125%;
     }
 </style>
