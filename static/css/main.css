@@ -4471,10 +4471,10 @@ input, select, textarea {
 		}
 	}
 
-	.feather-star {
+	.feather-star-empty {
         opacity: 0.2;
     }
-    .feather-star.checked {
+    .feather-star-full {
         color: var(--primary);
         opacity: 1;
     }

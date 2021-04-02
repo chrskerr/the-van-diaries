@@ -34,9 +34,9 @@
             <header class="major">
                 <h1 class="title">{title}, {state}</h1>
                 <div class="ratings">
-                    <span class={`feather-star ${place.rating >= 1 ? "checked" : ""}`} />
-                    <span class={`feather-star ${place.rating >= 2 ? "checked" : ""}`} />
-                    <span class={`feather-star ${place.rating >= 3 ? "checked" : ""}`} />
+                    <span class={`${place.rating >= 1 ? "feather-star-full" : "feather-star-empty"}`} />
+                    <span class={`${place.rating >= 2 ? "feather-star-full" : "feather-star-empty"}`} />
+                    <span class={`${place.rating >= 3 ? "feather-star-full" : "feather-star-empty"}`} />
                 </div>
                 <p class="rating-text">{ratingText}</p>
                 {#if latLng}

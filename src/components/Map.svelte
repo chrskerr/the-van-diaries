@@ -34,18 +34,18 @@
                 );
             }
 
-            L.control.locate({ flyTo: false, icon: "feather-location", iconLoading: "feather-loader icon-spin" }).addTo(map);
+            L.control.locate({ flyTo: false, icon: "feather-navigation", iconLoading: "feather-loader icon-spin" }).addTo(map);
 
-            const icon = L.divIcon({ html: "<span class='feather-location' />" });
+            const icon = L.divIcon({ html: "<span class='feather-location' />", iconSize: [18, 18], iconAnchor: [9, 18] });
             markers.forEach(({ title, latLng, slug, categories, rating }) => {
                 const popup = L.marker(latLng, { icon })
                     .addTo(map)
                     .bindPopup(
                         L.popup({ closeButton: false }).setContent(
                             `<h5>${title}</h5><div class="ratings">
-                            <span class="feather-star ${rating >= 1 ? "checked" : ""}"></span>
-                            <span class="feather-star ${rating >= 2 ? "checked" : ""}"></span>
-                            <span class="feather-star ${rating >= 3 ? "checked" : ""}"></span>
+                            <span class="${rating >= 1 ? "feather-star-full" : "feather-star-empty"}"></span>
+                            <span class="${rating >= 2 ? "feather-star-full" : "feather-star-empty"}"></span>
+                            <span class="${rating >= 3 ? "feather-star-full" : "feather-star-empty"}"></span>
                         </div><p class="rating-text">${_.get(ratingsMap, rating)}</p><ul>${_.join(
                                 _.map(categories, cat => `<li>${_.startCase(cat)}</li>`),
                                 "",
