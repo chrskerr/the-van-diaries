@@ -19,4 +19,3 @@ Yackandandah has to be one of the cutest towns we've been to. Its filled with pu
 - Blackwood distillery looks well worth visiting (hopefully it's open - we're here over Easter).
 - We are currently planning on sleeping outside the public toilets on the corner of Railway Ave and Issacs Ave - will report in on how that goes too!
   - There are a few paid caravan sites nearby too
-  
