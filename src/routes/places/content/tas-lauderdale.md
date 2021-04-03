@@ -32,7 +32,8 @@ As always when stealth camping, be nice to the locals, pick up your rubbish and 
 ##### Things to do in Hobart:
 - [MONA museum](https://mona.net.au), definitely worth the entry fee ($30 for non-Tasmanian adults at time of writing). Coming from someone who ordinarily finds both museums and art to be exceptionally boring, this museum has been executed amazingly well.  
 - North-South MTB track - see more at blog post here
-- [Cascade brewery](https://www.cascadebreweryco.com.au); fun fact, the oldest brewery in Australia - also written up here 
+- [Cascade brewery](https://www.cascadebreweryco.com.au); fun fact, the oldest brewery in Australia 
 - [Salamanca markets](https://www.salamancamarket.com.au) every Saturday morning and the alleys around the markets
-- Clarence MTB track - read more here
+- Clarence MTB track - a great mountain bike park. We spent most of our time here playing around at the skill park - really awesome way for us to learn how to take tight corners and jumps
+- North South MTB track - one of the great original MTB tracks in Tasmania, this 11km loop is worth a ride. For more info check out [here](https://www.hobartcity.com.au/Community/Events-and-activities/Tracks-and-trails/Mountain-biking-and-activities/Mountain-bike-tracks/North-South-Track) 
 - [Van Diemans Land Creamery](https://vdlcreamery.com.au) - now we eat a lot of ice cream (also why we do a lot of MTB riding!) and both agreed VDLC needed to be part of our daily diet while in Hobart  
