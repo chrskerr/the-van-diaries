@@ -21,6 +21,7 @@ We went in expecting to spend the day exploring a cafe or two at my parents reco
 - Cafes: too many to count, you can't go wrong with most of them.
 - Showers are at the gym/pool in town, was $2 each for a very clean and well maintained bathroom.
 - There are two IGAs and plenty of smaller shops for supplies.
+- We also did the local Park Run on the Saturday morning that started right at the Botanical Gardens where we were sleeping (very convient of them!)
 
 
 If you're nearby or looking for a beautiful place to stop and slow down for a little while, this city could be just the spot!

@@ -18,7 +18,8 @@ Bright was an interesting & delicious town, with great nearby outdoors and mount
 - The rail trail is an obvious draw. If you don't have bikes, you can hire them, and cycle up and down the trail which takes you past great forest and amazing outlooks. There are heaps of small towns with their own quirks and adventures along the trail, so you can invest some serious time here.
 - Mystic MTB park was an extremely well put together park, with heaps of riding, great shuttle services and well maintained trails.
   - We rode Sliders & Tombstone multiple times since they were so fun, but they also have well posted loops of various lengths and grades. 
-- Showers: we couldn't find any public showers, so we swam in the river near the Splash Park and then rinsed in the Splash Park. We got a few funny looks but mostly this was okay!
+  - The local Bright Park Run was also a winner! The free 5km route started just out of town and was a lovely out and back course through the trees, all relatively flat.
+- Showers: we couldn't find any public showers, so we swam in the river near the Splash Park and then rinsed in the Splash Park. We got a few funny looks but mostly this was okay! And it was by far the most fun shower we have had in years.
 - Sleeping: there are heaps of paid options for camping / powered sites, etc, and there are apparently some solid free camping locations nearby, but we just slept in the van near the Splash Park by the toilets and bbqs. This was easy and very relaxed place to be, so we spent much of ours days in the park too while not out exploring.
 - The Bright Ice Creamery was always busy and always worth the wait, we went in most days when it started to get hotter and barely tried their extensive flavour collection. 
 - Food Wine Friends was our highlight for coffee, it was a lovely spot with a relaxed vibe, and freshly baked treats. 
