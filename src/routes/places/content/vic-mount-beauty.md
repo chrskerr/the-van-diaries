@@ -16,7 +16,7 @@ We originally came on the recommendation that the Big Hill MTB park was worth a 
 
 Day two we attempted to run to the top of Mount Bogong just nearby. It was one of the toughest climbs we've done in terms of sustained steepness but paid of with beautiful views from (near) the top. Since we were running it and travelling light, we were unprepared for a strong change of wind near the summit which caused us to retreat into the trees for warmth.
 
-What we've loved:
+#### What we've loved:
 - Amazing mtb trail. The only criticism you could have is that there is too much trail and sometimes it's hard to keep track of all the intersections. There are a few spots which are light on signage, but mostly its very clear and super well maintained. We've already been up a few times and aren't planning on leave just yet! Very flowy and fun. We've barely scratched the surface of this park.
 - Free (cold) public showers at the Mount Beauty Lakeside bathrooms (spot marked in the pin).
 - So much other trail nearby. Mt Bogong as above, Mt Feathertop isn't far off. Being an alpine region, almost everywhere on the map is forest & trail.

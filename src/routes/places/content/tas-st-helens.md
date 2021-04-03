@@ -14,7 +14,7 @@ St Helens is just the other side of Blue Tier from Derby, and is just south of t
 
 It has great access to these trails, the Bay of Fires area, and to their own world-class MTB park. We stayed for far longer than originally planned in St Helens because we just couldn't get sick of the place!
 
-How we did St Helens:
+#### How we did St Helens:
 - We slept in both free camping (the Lions Park just south of town seemed to be pretty acceptable) and stealthy spots (in the carpark near the bathrooms by the marina). We didn't get moved on in the second but I doubt it would've lasted. There is apparently a free caravan campsite nearby but we never went looking for it. 
 - We showered at those bathrooms near the marina - it was $4 or similar for hot water.
 - The mountain bike trails are awesome, we went up every day we were there. They are beautifully maintained and just a heap of fun to cruise through!
