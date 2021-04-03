@@ -33,6 +33,9 @@ This is how you write normal text
 
 This is normal text with a link: [Google](https://www.google.com)
 
+Open in new tab links: (USE THESE ALMOST EVERYWHERE INSTEAD OF ABOVE)
+<a target="_blank" rel="noopener" href="https://www.milawacheese.com.au">Milawa Cheese</a> 
+
 Text on two rows without a line between
 is close together
 

@@ -47,9 +47,13 @@
     "picomatch" "^2.2.2"
 
 "@sveltejs/adapter-static@1.0.0-next.3":
+  "integrity" "sha512-EMAfguRzJsEleAVIqcOkHmsV+ht/iWnTiZucnyAtOiVNqQ6Iyyskfmq8ewGpXVdfcZ03t4v6W/vKtyLe28K02w=="
+  "resolved" "https://registry.npmjs.org/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.3.tgz"
   "version" "1.0.0-next.3"
 
 "@sveltejs/kit@1.0.0-next.53":
+  "integrity" "sha512-GkXoJZ3fYXaMMsreIppCsGD4NJTCOlpEN4yBLXa/4W8sZezT1/a1d8c5613OlppEKrAl/GPivxN8cVVtM0/v6g=="
+  "resolved" "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.53.tgz"
   "version" "1.0.0-next.53"
   dependencies:
     "@svitejs/vite-plugin-svelte" "^0.11.0"
@@ -428,7 +432,12 @@
   dependencies:
     "eslint-visitor-keys" "^1.1.0"
 
-"eslint-visitor-keys@^1.1.0", "eslint-visitor-keys@^1.3.0":
+"eslint-visitor-keys@^1.1.0":
+  "integrity" "sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ=="
+  "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz"
+  "version" "1.3.0"
+
+"eslint-visitor-keys@^1.3.0":
   "integrity" "sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ=="
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz"
   "version" "1.3.0"
@@ -514,7 +523,12 @@
   "resolved" "https://registry.npmjs.org/estraverse/-/estraverse-4.3.0.tgz"
   "version" "4.3.0"
 
-"estraverse@^5.1.0", "estraverse@^5.2.0":
+"estraverse@^5.1.0":
+  "integrity" "sha512-BxbNGGNm0RyRYvUdHpIwv9IWzeM9XClbOxwoATuFdOE7ZE6wHL+HQ5T8hoPM+zHvmKzzsEqhgy0GrQ5X13afiQ=="
+  "resolved" "https://registry.npmjs.org/estraverse/-/estraverse-5.2.0.tgz"
+  "version" "5.2.0"
+
+"estraverse@^5.2.0":
   "integrity" "sha512-BxbNGGNm0RyRYvUdHpIwv9IWzeM9XClbOxwoATuFdOE7ZE6wHL+HQ5T8hoPM+zHvmKzzsEqhgy0GrQ5X13afiQ=="
   "resolved" "https://registry.npmjs.org/estraverse/-/estraverse-5.2.0.tgz"
   "version" "5.2.0"
@@ -1288,7 +1302,16 @@
   "resolved" "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
   "version" "1.0.3"
 
-"string-width@^1.0.1", "string-width@^1.0.2":
+"string-width@^1.0.1":
+  "integrity" "sha1-EYvfW4zcUaKn5w0hHgfisLmxB9M="
+  "resolved" "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "code-point-at" "^1.0.0"
+    "is-fullwidth-code-point" "^1.0.0"
+    "strip-ansi" "^3.0.0"
+
+"string-width@^1.0.2":
   "integrity" "sha1-EYvfW4zcUaKn5w0hHgfisLmxB9M="
   "resolved" "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz"
   "version" "1.0.2"

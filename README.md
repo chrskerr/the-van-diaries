@@ -3,6 +3,8 @@
 ## To Do's:
 - Add filters to main Map
 - Add RSS feed?
+- Change links to open in new tab
+- Add links to all write ups
 
 
 ## To Tests:
