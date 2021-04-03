@@ -35,7 +35,7 @@ Worst case scenario you can just go back!
 Cafes, shopping centres, etc, is somewhere you'd happily spend some time or is this just about the sleep. Big consideration against that shortlist.
 
 ### Step 6 - leave it how you found it
-Please don't contribute to the perception that vans can be bad guests! No garbage layout around, and if you're in a residential area keep noise to a respectful level. Parties in the park probably won't go down to well, but most people don't care about music, talking, and general enjoyment. The goal here is to make sure the next visitor isn't chased off ;) 
+Please don't contribute to the perception that vans can be bad guests! No garbage left behind, and if you're in a residential area keep noise to a respectful level. Parties in the park probably won't go down to well, but most people don't care about music, talking, and general enjoyment. The goal here is to make sure the next visitor isn't chased off ;) 
 
 ----
 
