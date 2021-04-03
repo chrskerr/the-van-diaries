@@ -24,11 +24,12 @@
                 <h1>Writing</h1>
                 <p>Anything we'd like to write about</p>
             </header>
-            <div class={`writing-container ${_.size(sortedWriting) === 2 ? "only-two" : ""}`}>
-                {#each sortedWriting as { slug, title, date, summary, author }, i (slug)}
-                    <div
-                        animate:flip={{ duration: 800, easing: backOut }}
-                        class={`
+            {#if _.size(sortedWriting) > 0}
+                <div class={`writing-container ${_.size(sortedWriting) === 2 ? "only-two" : ""}`}>
+                    {#each sortedWriting as { slug, title, date, summary, author }, i (slug)}
+                        <div
+                            animate:flip={{ duration: 800, easing: backOut }}
+                            class={`
 							piece 
 							${_.size(writing) === 1 ? "only-one" : ""}
 							${_.size(writing) === 2 && i === 1 ? "only-two" : ""}
@@ -38,19 +39,28 @@
 							${i === 0 || i === 1 ? "first-two" : ""}
 							${i === 0 ? "first" : ""}
 							`}
-                    >
-                        <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/writing/${slug}`}>{title}</a></h3>
-                        <h6 in:blur={{ duration: 600 }}>{format(parseISO(date), "do MMMM yyyy")}</h6>
-                        <p in:blur={{ duration: 600 }}>{summary}</p>
-                        <a in:blur={{ duration: 600 }} sveltekit:prefetch href={`/writing/${slug}`} class="button small">Read More</a>
-                    </div>
-                {/each}
-            </div>
+                        >
+                            <h3 in:blur={{ duration: 600 }}><a sveltekit:prefetch href={`/writing/${slug}`}>{title}</a></h3>
+                            <h6 in:blur={{ duration: 600 }}>{format(parseISO(date), "do MMMM yyyy")}</h6>
+                            <p in:blur={{ duration: 600 }}>{summary}</p>
+                            <a in:blur={{ duration: 600 }} sveltekit:prefetch href={`/writing/${slug}`} class="button small">Read More</a>
+                        </div>
+                    {/each}
+                </div>
+            {:else}
+                <div class="no-writing-container">
+                    <p>Looks like we haven't written anything yet...</p>
+                </div>
+            {/if}
         </div>
     </div>
 </div>
 
 <style>
+    .no-writing-container {
+        display: flex;
+        justify-content: center;
+    }
     .writing-container {
         display: flex;
         flex-direction: row;

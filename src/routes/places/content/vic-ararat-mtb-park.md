@@ -6,6 +6,7 @@ date: 2021-03-18
 summary: Confusing and not well maintained bike track; decent free camping nearby
 categories: ["mountain-biking", "free-camping"]
 published: true
+rating: 1
 ---
 
 We didn't spend a long time in Ararat because we found the mountain bike park pretty confusing and not well maintained. They apparently have a big investment in upgrades coming, and it's extremely likely that we were in the wrong place, but we found it very hard to know where to park, which trails to ride, what to expect etc. 

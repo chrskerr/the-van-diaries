@@ -3520,7 +3520,7 @@ input, select, textarea {
 			}
 
 		#header.alt {
-			padding: 2rem;
+			padding: 1rem 2rem;
 		}
 
 		#header nav {
@@ -4469,4 +4469,23 @@ input, select, textarea {
 		.blog-post-body img {
 			width: 100%;
 		}
+	}
+
+	.feather-star-empty {
+        opacity: 0.2;
+    }
+    .feather-star-full {
+        color: var(--primary);
+        opacity: 1;
+    }
+	.leaflet-popup-content > h5 {
+		margin-bottom: 0.5rem;
+	}
+	.leaflet-popup-content > .ratings {
+		margin-bottom: 0.5rem;
+	}
+	.leaflet-popup-content > .rating-text {
+		font-style: italic;
+		font-weight: 500;
+		margin: 0 0 1rem 0;
 	}
