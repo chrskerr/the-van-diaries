@@ -8,8 +8,8 @@
 	},
 	"devDependencies": {
 		"@beyonk/svelte-carousel": "^2.8.0",
-		"@sveltejs/adapter-static": "1.0.0-next.3",
-		"@sveltejs/kit": "1.0.0-next.53",
+		"@sveltejs/adapter-static": "1.0.0-next.4",
+		"@sveltejs/kit": "1.0.0-next.71",
 		"css-minify": "^1.1.0",
 		"eslint": "^7.22.0",
 		"purgecss": "^4.0.2",
@@ -26,9 +26,11 @@
 		"date-fns": "^2.19.0",
 		"front-matter": "^4.0.2",
 		"leaflet": "^1.7.1",
+		"leaflet-control-custom": "^1.0.0",
 		"leaflet-geosearch": "^3.2.2",
 		"leaflet-providers": "^1.11.0",
 		"leaflet.locatecontrol": "^0.73.0",
+		"Leaflet.MultiOptionsPolyline": "^1.0.0",
 		"lodash": "^4.17.21",
 		"marked": "^2.0.1",
 		"swiper": "^6.5.3"

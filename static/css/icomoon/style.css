@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon-feather';
-  src:  url('fonts/icomoon-feather.eot?3thgau');
-  src:  url('fonts/icomoon-feather.eot?3thgau#iefix') format('embedded-opentype'),
-    url('fonts/icomoon-feather.ttf?3thgau') format('truetype'),
-    url('fonts/icomoon-feather.woff?3thgau') format('woff'),
-    url('fonts/icomoon-feather.svg?3thgau#icomoon-feather') format('svg');
+  src:  url('fonts/icomoon-feather.eot?qault8');
+  src:  url('fonts/icomoon-feather.eot?qault8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon-feather.ttf?qault8') format('truetype'),
+    url('fonts/icomoon-feather.woff?qault8') format('woff'),
+    url('fonts/icomoon-feather.svg?qault8#icomoon-feather') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.feather-check:before {
+  content: "\e904";
+}
 .feather-chevron-left:before {
   content: "\e902";
 }
@@ -36,6 +39,9 @@
 }
 .feather-navigation:before {
   content: "\e900";
+}
+.feather-trending-down:before {
+  content: "\e905";
 }
 .feather-location:before {
   content: "\ea1a";

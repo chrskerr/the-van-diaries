@@ -53,33 +53,33 @@
     "estree-walker" "^2.0.1"
     "picomatch" "^2.2.2"
 
-"@sveltejs/adapter-static@1.0.0-next.3":
-  "integrity" "sha512-EMAfguRzJsEleAVIqcOkHmsV+ht/iWnTiZucnyAtOiVNqQ6Iyyskfmq8ewGpXVdfcZ03t4v6W/vKtyLe28K02w=="
-  "resolved" "https://registry.npmjs.org/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.3.tgz"
-  "version" "1.0.0-next.3"
+"@sveltejs/adapter-static@1.0.0-next.4":
+  "integrity" "sha512-Atri/5jyiVmAklqDKb/5czmLkHos6LQOag61k/C6qWozMb8UopvL3bTm62hFQXGKvGnuSRq2xIueDOKWHM/7rA=="
+  "resolved" "https://registry.npmjs.org/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.4.tgz"
+  "version" "1.0.0-next.4"
 
-"@sveltejs/kit@1.0.0-next.53":
-  "integrity" "sha512-GkXoJZ3fYXaMMsreIppCsGD4NJTCOlpEN4yBLXa/4W8sZezT1/a1d8c5613OlppEKrAl/GPivxN8cVVtM0/v6g=="
-  "resolved" "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.53.tgz"
-  "version" "1.0.0-next.53"
+"@sveltejs/kit@1.0.0-next.71":
+  "integrity" "sha512-9oZEKtuFpmJanL0u7oJPWIoC4kWMtNSuN1SN7xKo+g54xI6JcsoH2J15OkTU89Hsd9Ctp4/OTh9j6/vgq9J7gw=="
+  "resolved" "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.71.tgz"
+  "version" "1.0.0-next.71"
   dependencies:
-    "@svitejs/vite-plugin-svelte" "^0.11.0"
+    "@sveltejs/vite-plugin-svelte" "^1.0.0-next.5"
     "cheap-watch" "^1.0.3"
     "sade" "^1.7.4"
 
-"@svitejs/vite-plugin-svelte@^0.11.0":
-  "integrity" "sha512-G4UCAyRvbqr/3RuRrWib7iPZPMBmDgk7kvgCn0js76TGS2NaVce5AoWjWgPR0M5z71P9SBH77e3N/pO70ziBNw=="
-  "resolved" "https://registry.npmjs.org/@svitejs/vite-plugin-svelte/-/vite-plugin-svelte-0.11.1.tgz"
-  "version" "0.11.1"
+"@sveltejs/vite-plugin-svelte@^1.0.0-next.5":
+  "integrity" "sha512-RVjafsqziWwnQm8VEy2y0qNaugNDvRd8tTaCt9rjgQkqaS/BDiyDCluXxA28PRC+ddZjvwUeq9k+0EfbLVObfg=="
+  "resolved" "https://registry.npmjs.org/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-1.0.0-next.5.tgz"
+  "version" "1.0.0-next.5"
   dependencies:
     "@rollup/pluginutils" "^4.1.0"
     "chalk" "^4.1.0"
-    "debug" "^4.3.1"
+    "debug" "^4.3.2"
     "hash-sum" "^2.0.0"
     "require-relative" "^0.8.7"
     "slash" "^3.0.0"
     "source-map" "^0.7.3"
-    "svelte-hmr" "^0.13.0"
+    "svelte-hmr" "^0.13.3"
 
 "acorn-jsx@^5.3.1":
   "integrity" "sha512-K0Ptm/47OKfQRpNQ2J/oIN/3QYiK6FwW+eJbILhsdxh2WTLdl+30o8aGdTbm5JbffpFFAg/g+zi1E+jvJha5ng=="
@@ -324,10 +324,10 @@
   "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.19.0.tgz"
   "version" "2.19.0"
 
-"debug@^4.0.1", "debug@^4.1.1", "debug@^4.3.1":
-  "integrity" "sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
-  "version" "4.3.1"
+"debug@^4.0.1", "debug@^4.1.1", "debug@^4.3.2":
+  "integrity" "sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw=="
+  "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.2.tgz"
+  "version" "4.3.2"
   dependencies:
     "ms" "2.1.2"
 
@@ -371,12 +371,7 @@
   dependencies:
     "ssr-window" "^3.0.0-alpha.1"
 
-"domelementtype@^2.0.1":
-  "integrity" "sha512-LsTgx/L5VpD+Q8lmsXSHW2WpA+eBlZ9HPf3erD1IoPF00/3JKHZ3BknUVA2QGDNu69ZNmyFmCWBSO45XjYKC5w=="
-  "resolved" "https://registry.npmjs.org/domelementtype/-/domelementtype-2.1.0.tgz"
-  "version" "2.1.0"
-
-"domelementtype@^2.1.0":
+"domelementtype@^2.0.1", "domelementtype@^2.1.0":
   "integrity" "sha512-LsTgx/L5VpD+Q8lmsXSHW2WpA+eBlZ9HPf3erD1IoPF00/3JKHZ3BknUVA2QGDNu69ZNmyFmCWBSO45XjYKC5w=="
   "resolved" "https://registry.npmjs.org/domelementtype/-/domelementtype-2.1.0.tgz"
   "version" "2.1.0"
@@ -738,15 +733,7 @@
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-4.0.6.tgz"
   "version" "4.0.6"
 
-"import-fresh@^3.0.0":
-  "integrity" "sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw=="
-  "resolved" "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz"
-  "version" "3.3.0"
-  dependencies:
-    "parent-module" "^1.0.0"
-    "resolve-from" "^4.0.0"
-
-"import-fresh@^3.2.1":
+"import-fresh@^3.0.0", "import-fresh@^3.2.1":
   "integrity" "sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw=="
   "resolved" "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz"
   "version" "3.3.0"
@@ -875,6 +862,11 @@
   dependencies:
     "invert-kv" "^1.0.0"
 
+"leaflet-control-custom@^1.0.0":
+  "integrity" "sha512-Me7m9/lc/dArlu758vmTlhebVJe5UROtvfluvYdyGetmVTrasva8Airowc8FO7Pz8GM5WqZ8pbgqM8YSh9CcRw=="
+  "resolved" "https://registry.npmjs.org/leaflet-control-custom/-/leaflet-control-custom-1.0.0.tgz"
+  "version" "1.0.0"
+
 "leaflet-geosearch@^3.2.2":
   "integrity" "sha512-pRyu2E0x4TJTK4R0IjegkfEXUvGS2Ns1dxqKCd/aZgzKK4fIxub1KLh/TQEpZXsKCVaP/+DSC3N+9b+f2GBbVw=="
   "resolved" "https://registry.npmjs.org/leaflet-geosearch/-/leaflet-geosearch-3.2.2.tgz"
@@ -892,7 +884,12 @@
   "resolved" "https://registry.npmjs.org/leaflet.locatecontrol/-/leaflet.locatecontrol-0.73.0.tgz"
   "version" "0.73.0"
 
-"leaflet@^1.6.0", "leaflet@^1.7.1":
+"Leaflet.MultiOptionsPolyline@^1.0.0":
+  "integrity" "sha1-z9XezZFsk92Vc6/nGKkNJtUtlbA="
+  "resolved" "https://registry.npmjs.org/Leaflet.MultiOptionsPolyline/-/Leaflet.MultiOptionsPolyline-1.0.0.tgz"
+  "version" "1.0.0"
+
+"leaflet@^1.0.0", "leaflet@^1.6.0", "leaflet@^1.7.1":
   "integrity" "sha512-/xwPEBidtg69Q3HlqPdU3DnrXQOvQU/CCHA1tcDQVzOwm91YMYaILjNp7L4Eaw5Z4sOYdbBz6koWyibppd8Zqw=="
   "resolved" "https://registry.npmjs.org/leaflet/-/leaflet-1.7.1.tgz"
   "version" "1.7.1"
@@ -1406,7 +1403,7 @@
   dependencies:
     "has-flag" "^4.0.0"
 
-"svelte-hmr@^0.13.0":
+"svelte-hmr@^0.13.3":
   "integrity" "sha512-gagW62pLQ2lULmvNA3pIZu9pBCYOaGu3rQikUOv6Nokz5VxUgT9/mQLfMxj9phDEKHCg/lgr3i6PkqZDbO9P2Q=="
   "resolved" "https://registry.npmjs.org/svelte-hmr/-/svelte-hmr-0.13.3.tgz"
   "version" "0.13.3"
@@ -1507,7 +1504,7 @@
     "htmlparser2" "^6.0.0"
     "markdown-it" "^12.0.0"
 
-"vite@^2.0.0", "vite@^2.0.4", "vite@^2.1.0":
+"vite@^2.0.0", "vite@^2.0.4", "vite@^2.1.0", "vite@^2.1.2":
   "integrity" "sha512-K96k5Nb1kywggFwZNGf/NQVZIrjMSvjebYWFIEQRu8AQWtzxatMF8/reExFXebmrfWAT3PTUk6l4zJBkpMtyVg=="
   "resolved" "https://registry.npmjs.org/vite/-/vite-2.1.2.tgz"
   "version" "2.1.2"

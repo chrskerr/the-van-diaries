@@ -6,7 +6,7 @@ module.exports = {
 		hydratable: true,
 	},
 	kit: {
-		adapter: "@sveltejs/adapter-static",
+		adapter: require( "@sveltejs/adapter-static" )(),
 		target: "#svelte",
 		files: {
 			lib: "node_modules",

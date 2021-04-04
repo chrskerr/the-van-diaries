@@ -21,9 +21,7 @@
     import Map from "$components/Map.svelte";
     import _ from "lodash";
 
-    import Swiper from "swiper";
-    import SwiperCore, { Pagination, A11y } from "swiper/core";
-    SwiperCore.use([Pagination, A11y]);
+    import Swiper from "swiper/swiper-bundle.min.js";
 
     const _swiper = el => {
         new Swiper(el, {
@@ -45,6 +43,7 @@
 
     const { title, state, latLng, summary, image, html, rating } = place;
     import ratingsMap from "../../ratings";
+
     $: ratingText = _.get(ratingsMap, rating);
 </script>
 

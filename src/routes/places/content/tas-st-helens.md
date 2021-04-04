@@ -2,7 +2,7 @@
 title: St Helens
 state: Tasmania
 latLng: [-41.32307674392291, 148.24953258192994]
-date: 2021-02-29
+date: 2021-02-24
 image: ../images/image.jpg
 summary: Amazing quality mountain bike tracks, easy sleeping, and friendly locals
 categories: ["paid-camping", "free-camping", "stealth-camping", "mountain-biking", "foodie"]
