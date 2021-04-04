@@ -2,7 +2,7 @@
 title: Girgarre
 state: Victoria
 latLng: [-36.39903590998877, 144.9614745960896]
-date: 2021-02-21
+date: 2021-03-21
 image: false 
 summary: Literal shithole
 categories: ["free-camping"]
