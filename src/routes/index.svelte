@@ -38,7 +38,7 @@
                 <h2>The Rocketship</h2>
             </header>
             <div class="image fit special">
-                <img src="images/rocketship-small.jpg" alt="" />
+                <img src="images/rocketship-small.jpg" alt="Chris and Kate to the van" />
             </div>
             <p class="special">We bought our Ford Transit early 2020 and took the year custom fitting it in preparation for a major adventure!</p>
             <p class="special">Built to feel more like a loungeroom than your typical van conversion, we wanted our van to feel like a tiny home on wheels without any comprises to comfort, and with an excessive amount of power to allow for our digital nomad lifestyle (yes, you absolutely can live & work successfully on the road!).</p>
@@ -85,7 +85,7 @@
                 <div class="profiles">
                     <div class="profile">
                         <div class="image">
-                            <img src="images/chris-weights-derby.jpg" alt="" />
+                            <img src="images/chris-weights-derby.jpg" alt="Chris sitting on the ground in front of van" />
                         </div>
                         <div class="content">
                             <h3>Free Camping</h3>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="profile">
                         <div class="image">
-                            <img src="images/kate-mtb-derby.jpg" alt="" />
+                            <img src="images/kate-mtb-derby.jpg" alt="Kate holding her bike up on Derby trails" />
                         </div>
                         <div class="content">
                             <h3>Mountain Bike Riding</h3>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="profile">
                         <div class="image">
-                            <img src="images/van-life-hacks-castlemaine.jpg" alt="" />
+                            <img src="images/van-life-hacks-castlemaine.jpg" alt="Chris and Kate working next to the van" />
                         </div>
                         <div class="content">
                             <h3>Van Life Hacks</h3>

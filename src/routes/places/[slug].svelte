@@ -21,10 +21,30 @@
     import Map from "$components/Map.svelte";
     import _ from "lodash";
 
-    import ratingsMap from "../../ratings";
+    import Swiper from "swiper";
+    import SwiperCore, { Pagination, A11y } from "swiper/core";
+    SwiperCore.use([Pagination, A11y]);
+
+    const _swiper = el => {
+        new Swiper(el, {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            centeredSlides: true,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            a11y: true,
+        });
+    };
+
+    import "swiper/swiper.min.css";
+    import "swiper/components/pagination/pagination.min.css";
+    import "swiper/components/a11y/a11y.min.css";
 
     const { title, state, latLng, summary, image, html, rating } = place;
-
+    import ratingsMap from "../../ratings";
     $: ratingText = _.get(ratingsMap, rating);
 </script>
 
@@ -46,9 +66,19 @@
                 {/if}
                 <p>{summary}</p>
             </header>
-            {#if image}
+            {#if image && _.isString(image)}
                 <div class="image right">
                     <img src={image} alt={title} />
+                </div>
+            {/if}
+            {#if image && _.isArray(image)}
+                <div class="swiper-container" use:_swiper>
+                    <div class="swiper-wrapper">
+                        {#each image as src}
+                            <div class="swiper-slide"><img class="swiper-slide-image" {src} alt={title} /></div>
+                        {/each}
+                    </div>
+                    <div class="swiper-pagination" />
                 </div>
             {/if}
             <div class="blog-post-body">
@@ -107,5 +137,20 @@
     }
     .feather-star {
         font-size: 125%;
+    }
+
+    .swiper-container {
+        margin-bottom: 3rem;
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        width: fit-content;
+    }
+    .swiper-slide-image {
+        width: 45vw;
+        object-fit: contain;
+        object-position: center;
+        margin: 0 auto;
     }
 </style>

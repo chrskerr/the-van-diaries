@@ -3,7 +3,7 @@ title: Mount Beauty
 state: Victoria
 latLng: [-36.737662828857005, 147.17364171591845]
 date: 2021-03-27
-image: ../images/places/vic/mount-beauty/IMG_9889.jpeg
+image: [../images/places/vic/mount-beauty/IMG_9889.jpeg, ../images/places/vic/mount-beauty/IMG_9893.jpeg]
 summary: Truly lives up to its name. Amazing natural beauty, great facilities and a welcoming outdoor community.
 categories: ["stealth-camping", "mountain-biking", "trail-running"]
 published: true
@@ -23,5 +23,3 @@ Day two we attempted to run to the top of Mount Bogong just nearby. It was one o
 - There are a few honest free campsites nearby (Mountain Creek Campground, for example), but we slept at the carpark just a little south of the pin. In the carpark of the oval near the toilets and skate park. It was quiet and didn't seem to bother anyone. Its far enough from the road that you're not in anyones immediate space. There is another parking lot next to the pin which seems to be just as good tbh.
 
 We'll genuinely come back again some day soon, this has been a real highlight of the trip.
-
-![van at sunset](../images/places/vic/mount-beauty/IMG_9893.jpeg)
