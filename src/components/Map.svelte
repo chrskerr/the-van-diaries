@@ -25,12 +25,12 @@
                 detectRetina: true,
             }).addTo(map);
 
-            const latLngs = _.map(_.orderBy(markers, ["date"], ["asc"]), "latLng");
-
             setTimeout(() => map.invalidateSize(), 50);
-            setTimeout(() => map.flyToBounds(latLngs, { padding: [50, 50] }), 1500);
 
             if (!preventInteraction) {
+                const latLngs = _.map(_.orderBy(markers, ["date"], ["asc"]), "latLng");
+
+                setTimeout(() => map.flyToBounds(latLngs, { padding: [50, 50] }), 1500);
                 const polyline = L.polyline(latLngs, { color: "#37cbe9", weight: 2, opacity: 0.75 });
 
                 map.addControl(
@@ -66,16 +66,15 @@
             const clicks = {};
             const icon = L.divIcon({ html: "<span class='feather-location' />", iconSize: [18, 18], iconAnchor: [9, 21] });
             _.forEach(markers, ({ title, latLng, slug, categories, rating, mapOnly }) => {
-                const content = mapOnly
-                    ? `<h5>${title}</h5>`
-                    : `<h5>${title}</h5><div class="ratings">
+                if (mapOnly) return;
+                const content = `<h5>${title}</h5><div class="ratings">
                             <span class="${rating >= 1 ? "feather-star-full" : "feather-star-empty"}"></span>
                             <span class="${rating >= 2 ? "feather-star-full" : "feather-star-empty"}"></span>
                             <span class="${rating >= 3 ? "feather-star-full" : "feather-star-empty"}"></span>
                         </div><p class="rating-text">${_.get(ratingsMap, rating)}</p><ul>${_.join(
-                          _.map(categories, cat => `<li>${_.startCase(cat)}</li>`),
-                          "",
-                      )}</ul>`;
+                    _.map(categories, cat => `<li>${_.startCase(cat)}</li>`),
+                    "",
+                )}</ul>`;
 
                 const popup = L.marker(latLng, { icon })
                     .addTo(map)
@@ -83,22 +82,19 @@
 
                 if (!preventInteraction) {
                     clicks[slug] = 0;
-
-                    if (!mapOnly) {
-                        popup.on("click", () => {
-                            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && clicks[slug] === 0) {
-                                popup.openPopup();
-                                prefetch(`/places/${slug}`);
-                                clicks[slug]++;
-                            } else {
-                                goto(`/places/${slug}`);
-                            }
-                        });
-                    }
+                    popup.on("click", () => {
+                        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && clicks[slug] === 0) {
+                            popup.openPopup();
+                            prefetch(`/places/${slug}`);
+                            clicks[slug]++;
+                        } else {
+                            goto(`/places/${slug}`);
+                        }
+                    });
                     popup.on("mouseover", () => {
                         popup.openPopup();
                         clicks[slug]++;
-                        if (!mapOnly) prefetch(`/places/${slug}`);
+                        prefetch(`/places/${slug}`);
                     });
                     popup.on("mouseout", () => {
                         popup.closePopup();
