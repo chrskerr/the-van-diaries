@@ -4,8 +4,9 @@ import fm from "front-matter";
 import marked from "marked";
 import _ from "lodash";
 
-export async function get () {
+export async function get ( req ) {
 	const files = fs.readdirSync( "src/routes/places/content" );
+	const isMap = req.query.get( "src" ) === "map";
 
 	if ( files && _.size( files ) > 0 ) {
 		return {
@@ -15,7 +16,7 @@ export async function get () {
 					const fileRes = fs.readFileSync( `src/routes/places/content/${file}`, { encoding: "utf-8" });
 					const { body, attributes } = fm( fileRes );
 					const html = marked( body );
-					if ( !attributes.published ) return false;
+					if ( !attributes.published || ( attributes.mapOnly && !isMap )) return false;
 					return { html, ...attributes, slug: _.replace( file, /.md$/, "" ) };
 				})),
 			},

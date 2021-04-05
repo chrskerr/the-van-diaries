@@ -24,10 +24,14 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
                 detectRetina: true,
             }).addTo(map);
+
+            const latLngs = _.map(_.orderBy(markers, ["date"], ["asc"]), "latLng");
+
             setTimeout(() => map.invalidateSize(), 50);
+            setTimeout(() => map.flyToBounds(latLngs, { padding: [50, 50] }), 1500);
 
             if (!preventInteraction) {
-                const polyline = L.polyline(_.map(_.orderBy(markers, ["date"], ["asc"]), "latLng"), { color: "#37cbe9", weight: 2, opacity: 0.75 });
+                const polyline = L.polyline(latLngs, { color: "#37cbe9", weight: 2, opacity: 0.75 });
 
                 map.addControl(
                     new GeoSearch.GeoSearchControl({
@@ -59,39 +63,42 @@
 
             L.control.locate({ flyTo: false, icon: "feather-navigation", iconLoading: "feather-loader icon-spin" }).addTo(map);
 
+            const clicks = {};
             const icon = L.divIcon({ html: "<span class='feather-location' />", iconSize: [18, 18], iconAnchor: [9, 21] });
-            _.forEach(markers, ({ title, latLng, slug, categories, rating }) => {
-                const popup = L.marker(latLng, { icon })
-                    .addTo(map)
-                    .bindPopup(
-                        L.popup({ closeButton: false }).setContent(
-                            `<h5>${title}</h5><div class="ratings">
+            _.forEach(markers, ({ title, latLng, slug, categories, rating, mapOnly }) => {
+                const content = mapOnly
+                    ? `<h5>${title}</h5>`
+                    : `<h5>${title}</h5><div class="ratings">
                             <span class="${rating >= 1 ? "feather-star-full" : "feather-star-empty"}"></span>
                             <span class="${rating >= 2 ? "feather-star-full" : "feather-star-empty"}"></span>
                             <span class="${rating >= 3 ? "feather-star-full" : "feather-star-empty"}"></span>
                         </div><p class="rating-text">${_.get(ratingsMap, rating)}</p><ul>${_.join(
-                                _.map(categories, cat => `<li>${_.startCase(cat)}</li>`),
-                                "",
-                            )}</ul>`,
-                        ),
-                    );
+                          _.map(categories, cat => `<li>${_.startCase(cat)}</li>`),
+                          "",
+                      )}</ul>`;
 
-                let clicks = 0;
+                const popup = L.marker(latLng, { icon })
+                    .addTo(map)
+                    .bindPopup(L.popup({ closeButton: false }).setContent(content));
 
                 if (!preventInteraction) {
-                    popup.on("click", () => {
-                        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && clicks === 0) {
-                            popup.openPopup();
-                            prefetch(`/places/${slug}`);
-                            clicks++;
-                        } else {
-                            goto(`/places/${slug}`);
-                        }
-                    });
+                    clicks[slug] = 0;
+
+                    if (!mapOnly) {
+                        popup.on("click", () => {
+                            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && clicks[slug] === 0) {
+                                popup.openPopup();
+                                prefetch(`/places/${slug}`);
+                                clicks[slug]++;
+                            } else {
+                                goto(`/places/${slug}`);
+                            }
+                        });
+                    }
                     popup.on("mouseover", () => {
                         popup.openPopup();
-                        clicks++;
-                        prefetch(`/places/${slug}`);
+                        clicks[slug]++;
+                        if (!mapOnly) prefetch(`/places/${slug}`);
                     });
                     popup.on("mouseout", () => {
                         popup.closePopup();

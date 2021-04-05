@@ -1,6 +1,6 @@
 <script context="module">
     export async function load({ fetch }) {
-        const res = await fetch("/places/places.json");
+        const res = await fetch("/places/places.json?src=map");
         return { props: await res.json() };
     }
 </script>

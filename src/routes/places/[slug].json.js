@@ -10,7 +10,7 @@ export async function get ( request ) {
 		const fileRes = fs.readFileSync( `src/routes/places/content/${slug}.md`, { encoding: "utf-8" });
 		const { body, attributes } = fm( fileRes );
 		const html = marked( body );
-		if ( !attributes.published ) throw new Error();
+		if ( !attributes.published || attributes.mapOnly ) throw new Error();
 		return {
 			body: {
 				place: { html, ...attributes },

@@ -8,6 +8,7 @@ summary: Short Summary
 categories: ["paid-camping", "free-camping", "stealth-camping", "mountain-biking", "foodie", "trail-running", "other"]
 rating: 
 published: false
+mapOnly: false
 ---
 
 # Markdown Guide
