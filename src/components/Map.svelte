@@ -30,7 +30,7 @@
             if (!preventInteraction) {
                 const latLngs = _.map(_.orderBy(markers, ["date"], ["asc"]), "latLng");
 
-                setTimeout(() => map.flyToBounds(latLngs, { padding: [50, 50] }), 1500);
+                setTimeout(() => map.flyToBounds(latLngs, { paddingTopLeft: [40, 40], paddingBottomRight: [10, 10] }), 500);
                 const polyline = L.polyline(latLngs, { color: "#37cbe9", weight: 2, opacity: 0.75 });
 
                 map.addControl(
