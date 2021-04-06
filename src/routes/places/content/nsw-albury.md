@@ -1,6 +1,6 @@
 ---
 title: Albury
-state: NSW
+state: New South Wales
 latLng: [-36.08411197725856, 146.9079789195542]
 date: 2021-04-05
 summary: Great spot to work, eat, sleep and shower. Nice easy van stop.
