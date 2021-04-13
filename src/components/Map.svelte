@@ -12,6 +12,7 @@
 
     import ratingsMap from "../ratings";
 
+    let totalDistanceInMetres;
     onMount(async () => {
         if (browser) {
             const L = await import("leaflet");
@@ -29,6 +30,16 @@
 
             if (!preventInteraction) {
                 const latLngs = _.map(_.orderBy(markers, ["date"], ["asc"]), "latLng");
+
+                totalDistanceInMetres = _.reduce(
+                    latLngs,
+                    (total, curr, i) => {
+                        const next = _.nth(latLngs, i + 1);
+
+                        return next ? total + L.latLng(curr).distanceTo(next) : total;
+                    },
+                    0,
+                );
 
                 setTimeout(() => map.flyToBounds(latLngs, { paddingTopLeft: [40, 40], paddingBottomRight: [10, 10] }), 500);
                 const polyline = L.polyline(latLngs, { color: "#37cbe9", weight: 2, opacity: 0.75 });
@@ -106,6 +117,11 @@
 </script>
 
 <div id="map" class={`${size}`} />
+{#if totalDistanceInMetres}
+    <div class="distance-travelled">
+        <p>Total distance travelled: {_.round(totalDistanceInMetres / 1000).toLocaleString()}km</p>
+    </div>
+{/if}
 
 <style>
     @import "$lib/leaflet/dist/leaflet.css";
@@ -120,5 +136,15 @@
     }
     .small {
         height: 16rem;
+    }
+
+    .distance-travelled {
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .distance-travelled > p {
+        color: white;
+        font-size: 125%;
     }
 </style>
